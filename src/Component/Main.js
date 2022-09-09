@@ -14,7 +14,7 @@ class Main extends React.Component{
 
       componentDidMount = () => {
         axios
-          .get(`http://localhost:3000/games`)
+          .get(`${process.env.REACT_APP_URL}games`)
           .then((result) => {
             console.log(result.data);
             this.setState({
@@ -32,7 +32,17 @@ render(){
     
     return (
     <main >
-      <p>Hi </p>
+      {this.state.games.map(item=>{
+              return (
+                <>
+                  <h3>
+
+                  <h3>{item.name}</h3>
+
+                  </h3>
+                  
+        </>
+      )})}
     </main>
     
     
