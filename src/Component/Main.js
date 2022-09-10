@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+import '../App.css';
 
 class Main extends React.Component{
     constructor(props) {
@@ -31,7 +31,7 @@ render(){
 
     
     return (
-    <main >
+    <main className="main">
       {this.state.games.map(item=>{
               return (
                 <>
