@@ -10,7 +10,7 @@ const {isAuthenticated,loginWithRedirect,} = useAuth0();
   return !isAuthenticated && (
     <>
 
-    <a class="btn btn-warning" onClick={loginWithRedirect} >Log in</a>
+    <h3 className='logen' onClick={loginWithRedirect} >Log in</h3>
     </>
   );
 }
