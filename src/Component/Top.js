@@ -3,12 +3,12 @@ import axios from "axios";
 
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-class PC extends React.Component {
+class Top extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       games: [],
-      parent_platforms: "1",
+      parent_platforms: "4,8",
     };
   }
 
@@ -74,4 +74,4 @@ class PC extends React.Component {
     );
   }
 }
-export default PC;
+export default Top;

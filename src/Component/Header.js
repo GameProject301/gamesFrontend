@@ -22,7 +22,7 @@ class Header extends React.Component{
 <>
 
     <div className="bg-box">
-	<Carousel>
+	{/* <Carousel>
       <Carousel.Item interval={2000}>
         <img
           className="d-block w-100"
@@ -45,7 +45,7 @@ class Header extends React.Component{
         </Carousel.Caption>
       </Carousel.Item>
      
-    </Carousel>
+    </Carousel> */}
     
     </div>
    
@@ -78,7 +78,7 @@ GAMING
                 <a className="nav-link"  href="./" >Menu</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link"   href="./" >about</a>
+                <a className="nav-link"   href="./pc" >about</a>
 
                
               </li>

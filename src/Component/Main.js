@@ -1,7 +1,8 @@
 import React from "react";
 import axios from "axios";
 import '../App.css';
-import PC from "./PC";
+// import PC from "./PC";
+
 
 class Main extends React.Component{
     constructor(props) {
@@ -31,22 +32,22 @@ render(){
 
 
     
-    return (
-    <main className="main">
-      {/* {this.state.games.map(item=>{
-              return (
-                <>
-                  <h3>
+    return (<div></div>
+    // <main className="main">
+    //   {this.state.games.map(item=>{
+    //           return (
+    //             <>
+    //               <h3>
 
-                  <h3>{item.name}</h3>
+    //               <h3>{item.name}</h3>
 
-                  </h3>
+    //               </h3>
                   
-        </>
-      )})} */}
-      <PC />
-    </main>
+    //     </>
+    //   )})}
     
+    // </main>
+    // <PC></PC>
     
     )
 }
