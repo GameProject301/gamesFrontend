@@ -14,28 +14,21 @@ some operations such that:
 5. As’har Momani
 6. Mariam Almasri
 # Roles
-1. Abdallah and Ismail  are design the wireframe of the 
+1. Abdallah and Ismail  are design the [wireframe](https://www.figma.com/file/d53NTOdQD0KVCc0HShPhEw/games-website?node-id=0%3A1) of the 
 project by using Figma website. 
-https://www.figma.com/file/
-d53NTOdQD0KVCc0HShPhEw/games-website?node-
-id=0%3A1
 2. Bashar searched about suitable API for project and we 
-got a RAWG API.
-https://rawg.io/apidocs
+got a [RAWG API](https://rawg.io/apidocs).
+
 3. Ismail create organization that contain the repositories 
-for frontend and backend on githup to push our code 
+for frontend and backend on [githup](https://github.com/GameProject301) to push our code 
 into it.
-https://github.com/GameProject301
+
 4. Abdallah test the code after other member pushed their
 work in githup to check if it works.
 5. Ala’ and Ismail start coding in frontend side. 
 6. Bashar write a problem domain.
-7. Ala’ design the Stories User in figma.
-https://www.figma.com/file/hqbMieMPfvR7jbft7p5tPo/
-Untitled?node-id=0%3A1
+7. Ala’ design the Stories User in [figma](https://www.figma.com/file/hqbMieMPfvR7jbft7p5tPo/Untitled?node-id=0%3A1).
 8. Ashar write a Documentation.
-9. Ismail create board in Trello and write Task inside 
+9. Ismail create board in [Trello]([https://www.figma.com/file/hqbMieMPfvR7jbft7p5tPo/Untitled?node-id=0%3A1](https://trello.com/b/29wj3j73/games-301). and write Task inside 
 it using small item to manage our project.
-https://trello.com/b/29wj3j73/games-301
-10. Abdallah make the Netlify link of Frontend side.
-https://pro-player.netlify.app/
+10. Abdallah make the [Netlify](https://pro-player.netlify.app/) link of Frontend side.
