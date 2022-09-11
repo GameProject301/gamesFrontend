@@ -3,7 +3,7 @@ import axios from "axios";
 
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-class Top extends React.Component {
+class Recently extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,7 +16,7 @@ class Top extends React.Component {
    console.log("hi")
     axios
       .get(
-        `${process.env.REACT_APP_URL}top`
+        `${process.env.REACT_APP_URL}recently`
       )
    
       .then((result) => {
@@ -74,4 +74,4 @@ class Top extends React.Component {
     );
   }
 }
-export default Top;
+export default Recently;
