@@ -29,6 +29,6 @@ work in githup to check if it works.
 6. Bashar write a problem domain.
 7. Ala’ design the Stories User in [figma](https://www.figma.com/file/hqbMieMPfvR7jbft7p5tPo/Untitled?node-id=0%3A1).
 8. Ashar write a Documentation.
-9. Ismail create board in [Trello]([https://www.figma.com/file/hqbMieMPfvR7jbft7p5tPo/Untitled?node-id=0%3A1](https://trello.com/b/29wj3j73/games-301). and write Task inside 
+9. Ismail create board in [Trello](https://trello.com/b/29wj3j73/games-301) . and write Task inside 
 it using small item to manage our project.
 10. Abdallah make the [Netlify](https://pro-player.netlify.app/) link of Frontend side.
