@@ -21,8 +21,8 @@ class Header extends React.Component{
        
 <>
 
-    <div className="bg-box">
-	{/* <Carousel>
+    {/* <div className="bg-box">
+	<Carousel>
       <Carousel.Item interval={2000}>
         <img
           className="d-block w-100"
@@ -45,9 +45,9 @@ class Header extends React.Component{
         </Carousel.Caption>
       </Carousel.Item>
      
-    </Carousel> */}
+    </Carousel>
     
-    </div>
+    </div> */}
    
     <div className="container">
         <nav className="navbar navbar-expand-lg custom_nav-container ">

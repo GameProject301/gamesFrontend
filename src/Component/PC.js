@@ -59,7 +59,7 @@ class PC extends React.Component {
                             )
                         })}
                  </ListGroup.Item>
-                 <ListGroup.Item> rate : {item.rate}</ListGroup.Item>
+                 <ListGroup.Item> metacritic : {item.metacritic}</ListGroup.Item>
                 
                 </ListGroup>
                 <Card.Body>

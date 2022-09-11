@@ -13,6 +13,9 @@ import {
 import Mobile from './Component/mobile';
 import PlayStation from './Component/Playstation';
 import Explore from './Component/Explore';
+import Recently from './Component/Recently';
+import Top from './Component/Top';
+import Category from "./Component/Category"
 class App extends React.Component{
 
   render(){
@@ -46,6 +49,21 @@ class App extends React.Component{
             <Route 
               exact path="/explore"
               element={isAuthenticated && <Explore/>}
+            >
+            </Route>
+            <Route 
+              exact path="/ecently"
+              element={isAuthenticated && <Recently/>}
+            >
+            </Route>
+            <Route 
+              exact path="/top"
+              element={isAuthenticated && <Top/>}
+            >
+            </Route>
+            <Route 
+              exact path="/category"
+              element={isAuthenticated && <Category/>}
             >
             </Route>
             </Routes>
