@@ -1,70 +1,51 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Overview 
+Our project is Gaming web Application that render all games 
+to the user by search to them and allowed to user make 
+some operations such that:
+1. Add game to favorite list.
+2. Update information of game.
+3. Delete game from list.
+4. Get game information from API.
+# Team Members 
+1. Ismail Al Amir
+2. Ala’ Abualodous
+3. Abdallah Mousa
+4. Bashar Telfah 
+5. As’har Momani
+6. Mariam Almasri
+# Roles
+1. Abdallah and Ismail  are design the wireframe of the 
+project by using Figma website. 
+https://www.figma.com/file/
+d53NTOdQD0KVCc0HShPhEw/games-website?node-
+id=0%3A1
+2. Bashar searched about suitable API for project and we 
+got a RAWG API.
+https://rawg.io/apidocs
+3. Ismail create organization that contain the repositories 
+for frontend and backend on githup to push our code 
+into it.
+https://github.com/GameProject301
+4. Ala’ write a starter code of server in backend side that 
+contains install all libraries required and import them in 
+VSC, make basic Routes (home route, test route, error 
+route, get route).
+5. Abdallah build the database schema and make model 
+from it also linked it with mongoDB Atlas.
+6. Ashar write the 3 reminds functions of CURD (Create, 
+Delete, and Update).
+7. Abdallah test the code after other member pushed their
+work in githup to check if it works.
+8. Ala’ and Ismail start coding in frontend side. 
+9. Bashar write a problem domain.
+10. Ala’ design the Stories User in figma.
+https://www.figma.com/file/hqbMieMPfvR7jbft7p5tPo/
+Untitled?node-id=0%3A1
+11. Ashar write a Documentation.
+12. Ismail create board in Trello and write Task inside 
+it using small item to manage our project.
+https://trello.com/b/29wj3j73/games-301
+13. Ismail make the Heroku app link of backend side.
+https://proplayergg.herokuapp.com/
+14. Abdallah make the Netlify link of Frontend side.
+https://pro-player.netlify.app/
