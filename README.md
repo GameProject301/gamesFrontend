@@ -32,3 +32,4 @@ work in githup to check if it works.
 9. Ismail create board in [Trello](https://trello.com/b/29wj3j73/games-301) . and write Task inside 
 it using small item to manage our project.
 10. Abdallah make the [Netlify](https://pro-player.netlify.app/) link of Frontend side.
+11. Ismail make PC component
