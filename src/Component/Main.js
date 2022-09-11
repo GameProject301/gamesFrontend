@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import '../App.css';
+import PC from "./PC";
 
 class Main extends React.Component{
     constructor(props) {
@@ -16,7 +17,7 @@ class Main extends React.Component{
         axios
           .get(`${process.env.REACT_APP_URL}games`)
           .then((result) => {
-            console.log(result.data);
+            // console.log(result.data);
             this.setState({
               games: result.data,
             });
@@ -32,7 +33,7 @@ render(){
     
     return (
     <main className="main">
-      {this.state.games.map(item=>{
+      {/* {this.state.games.map(item=>{
               return (
                 <>
                   <h3>
@@ -42,7 +43,8 @@ render(){
                   </h3>
                   
         </>
-      )})}
+      )})} */}
+      <PC />
     </main>
     
     
