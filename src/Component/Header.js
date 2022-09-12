@@ -78,7 +78,7 @@ GAMING
                 <a className="nav-link"  href="./" >Menu</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link"   href="./pc" >about</a>
+                <a className="nav-link"   href="./profile" >profile</a>
 
                
               </li>

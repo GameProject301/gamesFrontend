@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Roboto+Condensed:ital,wght@1,700&display=swap');
+
+h1{
+    font-family: 'Combo', cursive;
+font-family: 'Roboto Condensed', sans-serif;
+text-align: center;
+}
+.loadmore{
+    position: absolute;
+    margin-top:242%;
+   margin-left: 10%;
+}
+.loadLess{
+    position: absolute;
+    margin-top:242%;
+    background-color: red;
+    
+}
+.size{
+    width: 285px;
+    height: 160px;
+}
+.platforms{
+    font-size: 0.9rem;
+}
+.listplatforms{
+  height: 160px;
+}
+.cardbody{
+    height: 160px;
+}
+
+.platfomrslist li a{
+    text-decoration: none;
+}
