@@ -72,7 +72,7 @@ axios
 
         return(
 <>
-{console.log(parent.innerWidth)}
+
 
 <Button className={this.state.className}onClick={this.generateMore}>loadmore</Button>
 

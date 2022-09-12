@@ -23,6 +23,7 @@ import Top from './Component/Top';
 import Category from "./Component/Category";
 import Generate from './Component/Generate';
 import Support from './Component/Support';
+import CarouselRecommanded from './Component/assets/CarouselRecommanded';
 class App extends React.Component {
 
   render() {
@@ -32,7 +33,10 @@ class App extends React.Component {
       <>
         <Router>
           <Header />
+<CarouselRecommanded />
           <Routes>
+
+
             <Route
               exact path="/Profile"
               element={isAuthenticated && <Profile />}
@@ -49,7 +53,7 @@ class App extends React.Component {
             <Route 
               exact path="/main"
               element={isAuthenticated && <Main />}
-
+>
             </Route> 
             
             <Route
@@ -83,7 +87,7 @@ class App extends React.Component {
             </Route>
             <Route
               exact path="/explore"
-              element={isAuthenticated && <Explore />}
+              element={<Explore />}
             >
             </Route>
 
