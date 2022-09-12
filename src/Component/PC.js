@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
-
+import Row from 'react-bootstrap/Row';
+import CardGroup from 'react-bootstrap/CardGroup';
+import './alaa.css';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 class PC extends React.Component {
@@ -32,8 +34,8 @@ class PC extends React.Component {
 
   render() {
     return (
-      <div>
-
+      // <Row xs={1} md={4} className="g-4">
+<CardGroup>
         {this.state.games.map((item) => {
           return (
             <div>
@@ -42,19 +44,20 @@ class PC extends React.Component {
                   variant="top"
                   src={item.image}
                   alt ="img"
+                  className="size"
                 />
-                <Card.Body>
+                <Card.Body className="cardbody">
                   <Card.Title>{item.name}</Card.Title>
                   <Card.Text>
                   Genres:  {item.genres.join(" - ")}
                   </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                    <ListGroup.Item>
+                    <ListGroup.Item className="listplatforms">
                         {item.parent_platforms.map((element) =>{
                             return (
                                 <div>
-                                   <h3>{element}</h3>
+                                   <h3 className="platforms">{element}</h3>
                                 </div>
                             )
                         })}
@@ -70,7 +73,7 @@ class PC extends React.Component {
             </div>
           );
         })}
-      </div>
+      </CardGroup>
     );
   }
 }

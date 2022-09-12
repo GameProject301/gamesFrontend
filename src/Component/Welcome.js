@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
-function Profile() {
+function Welcome() {
   const { user } = useAuth0();
   const { isAuthenticated}=useAuth0();
   return isAuthenticated &&(
@@ -11,4 +11,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default Welcome;
