@@ -1,0 +1,56 @@
+.foot_img{
+    height: 90px;
+    margin: 25px;
+}
+.footer_row {
+    display: flex;
+    justify-content: center;
+}
+.copyright_text {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+.text-white {
+    text-decoration: none !important;
+}
+.text-center .p-3 {
+    height: 25px;
+}
+.icons_span {
+    float: right;
+    margin-right: 20px;
+}
+.sc_icon {
+    margin-right:10px;
+    text-decoration: none !important;
+}
+.us{
+    display: flex;
+    margin: 25px;
+
+}
+.person1 {
+    margin-right: 20px;
+    border-radius: 10rem !important;
+}
+.person2 {
+    margin-right: 20px;
+    border-radius: 10rem !important;
+}
+.person3 {
+    margin-right: 20px;
+    border-radius: 10rem !important;
+}
+.person4 {
+    margin-right: 20px;
+    border-radius: 10rem !important;
+}
+.person5 {
+    margin-right: 20px;
+    border-radius: 9rem !important;
+}
+.card-img-top {
+    border-radius: 9rem !important;
+}
+

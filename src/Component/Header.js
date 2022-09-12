@@ -4,7 +4,7 @@ import LogoutButton from "./LogoutButton";
 import { ReactSVG } from 'react-svg'
 import Carousel from 'react-bootstrap/Carousel';
 import { useAuth0 } from '@auth0/auth0-react';
-import { Navbar, NavItem } from 'react-bootstrap';
+import { Button, Navbar, NavItem } from 'react-bootstrap';
 
 
 
@@ -12,6 +12,8 @@ import { BsBoxArrowRight} from "react-icons/bs";
 import Welcome from "../Component/Welcome"
 
 import '../App.css';
+import About from "../About";
+
 class Header extends React.Component{
  
     render(){
@@ -79,6 +81,11 @@ GAMING
               </li>
               <li className="nav-item">
                 <a className="nav-link"   href="./profile" >profile</a>
+
+               
+              </li>
+              <li className="nav-item">
+              <a className="nav-link"   href="" >About</a>
 
                
               </li>
