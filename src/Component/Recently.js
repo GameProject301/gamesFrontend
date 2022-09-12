@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
-
+import Button from 'react-bootstrap/Button';
+import { withAuth0 } from '@auth0/auth0-react';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 class Recently extends React.Component {
@@ -11,7 +12,32 @@ class Recently extends React.Component {
       
     };
   }
+  addGames = (item)=>{
+ 
+    const { user } = this.props.auth0;
+    let obj ={
+        name: item.name,
+        image: item.image,
+        platforms: item.parent_platforms,
+        metacritic: item.metacritic,
+        genres: item.genres,
+        email: user.email
+    }
+    console.log(obj)
+    
+    axios
+    .post(`${process.env.REACT_APP_URL}games`, obj)
+    .then((result) => {
+      // this.setState({
+      //   showButton:true,
+      // });
+      alert("Game added")
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 
+  }
   componentDidMount = () => {
    console.log("hi")
     axios
@@ -60,12 +86,10 @@ class Recently extends React.Component {
                         })}
                  </ListGroup.Item>
                  <ListGroup.Item> metacritic : {item.metacritic}</ListGroup.Item>
-                
+                 <Button onClick={() => this.addGames(item)} variant="outline-danger">♥</Button>{' '}
+
                 </ListGroup>
-                <Card.Body>
-                  <Card.Link href="#">Card Link</Card.Link>
-                  <Card.Link href="#">Another Link</Card.Link>
-                </Card.Body>
+             
               </Card>
             </div>
           );
@@ -74,4 +98,4 @@ class Recently extends React.Component {
     );
   }
 }
-export default Recently;
+export default withAuth0(Recently);

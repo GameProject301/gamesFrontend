@@ -1,3 +1,5 @@
+
+
 'use strict';
 import React from 'react';
 import './App.css';
@@ -35,13 +37,14 @@ class App extends React.Component{
               element={isAuthenticated && <Profile />}
             >
             </Route>
-<Route 
+
+            <Route 
               exact path="/"
-              element={isAuthenticated && <Platforms />}
+              element={<Platforms />}
             >
               </Route>
             <Route 
-              exact path="/"
+              exact path="/main"
               element={isAuthenticated && <Main />}
             >
             </Route>
@@ -53,9 +56,12 @@ class App extends React.Component{
               
              <Generate />
              </>
+             
+
             }
             >
             </Route>
+           
             <Route 
               exact path="/mobile"
               element={isAuthenticated &&
@@ -77,7 +83,7 @@ class App extends React.Component{
             >
             </Route>
             <Route 
-              exact path="/ecently"
+              exact path="/recently"
               element={isAuthenticated && <Recently/>}
             >
             </Route>

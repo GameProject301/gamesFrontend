@@ -3,7 +3,11 @@ import axios from "axios";
 import Form from "react-bootstrap/Form";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-class Recently extends React.Component {
+import Button from "react-bootstrap/Button";
+import { withAuth0 } from "@auth0/auth0-react";
+import CardGroup from 'react-bootstrap/CardGroup';
+import './alaa.css';
+class Category extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,20 +15,44 @@ class Recently extends React.Component {
       show: false,
     };
   }
+  addGames = (item) => {
+    const { user } = this.props.auth0;
+    let obj = {
+      name: item.name,
+      image: item.image,
+      platforms: item.parent_platforms,
+      metacritic: item.metacritic,
+      genres: item.genres,
+      email: user.email,
+    };
+    console.log(obj);
 
+    axios
+      .post(`${process.env.REACT_APP_URL}games`, obj)
+      .then((result) => {
+        // this.setState({
+        //   showButton:true,
+        // });
+        alert("Game added");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   categorySelect = (event) => {
     event.preventDefault();
     let genres = event.target.value;
-    
-    
+    console.log(genres)
+    let url = `${process.env.REACT_APP_URL}category?genres=${genres}`
+    console.log(url)
     axios
-      .get(`${process.env.REACT_APP_URL}category?genres=${genres}`)
+      .get(url)
 
       .then((result) => {
         console.log(result.data);
         this.setState({
           games: result.data,
-          show : true
+          show: true,
         });
       })
       .catch((err) => {
@@ -41,35 +69,35 @@ class Recently extends React.Component {
           onChange={this.categorySelect}
         >
           <option>Select Category</option>
-            <option value="racing">Racing</option>
-          
+          <option value="racing">Racing</option>
+
           <option value="strategy">Strategy</option>
           <option value="card">Card</option>
           <option value="puzzle">Puzzle</option>
           <option value="arcade">Arcade</option>
-        
+
           <option value="action">Action</option>
           <option value="family">Family</option>
           <option value="educational">Educational</option>
         </Form.Select>
         {this.state.show && (
-          <div>
+          <CardGroup >
             {" "}
             {this.state.games.map((item) => {
               return (
                 <div>
-                  <Card style={{ width: "18rem" }}>
-                    <Card.Img variant="top" src={item.image} alt="img" />
-                    <Card.Body>
+                  <Card style={{ width: "18rem" }} className="alaa2">
+                    <Card.Img variant="top" src={item.image} alt="img"  className="size" />
+                    <Card.Body className="cardbody" >
                       <Card.Title>{item.name}</Card.Title>
                       <Card.Text>Genres: {item.genres.join(" - ")}</Card.Text>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                      <ListGroup.Item>
+                      <ListGroup.Item className="listplatforms">
                         {item.parent_platforms.map((element) => {
                           return (
                             <div>
-                              <h3>{element}</h3>
+                              <h3 className="platforms">>{element}</h3>
                             </div>
                           );
                         })}
@@ -78,19 +106,21 @@ class Recently extends React.Component {
                         {" "}
                         metacritic : {item.metacritic}
                       </ListGroup.Item>
+                      <Button
+                        onClick={() => this.addGames(item)}
+                        variant="outline-danger"
+                      >
+                        ♥
+                      </Button>{" "}
                     </ListGroup>
-                    <Card.Body>
-                      <Card.Link href="#">Card Link</Card.Link>
-                      <Card.Link href="#">Another Link</Card.Link>
-                    </Card.Body>
                   </Card>
                 </div>
               );
             })}
-          </div>
+          </CardGroup>
         )}
       </div>
     );
   }
 }
-export default Recently;
+export default withAuth0(Category);

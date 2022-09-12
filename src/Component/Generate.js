@@ -73,9 +73,10 @@ axios
 
         return(
 <>
-
+{console.log(parent.innerWidth)}
 
 <Button className={this.state.className}onClick={this.generateMore}>loadmore</Button>
+
 {
 this.state.show &&
 <Button className={this.state.className2}onClick={this.generateLess}>previous</Button>
