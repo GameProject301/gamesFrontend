@@ -2,7 +2,7 @@
 import React from 'react';
 import './App.css';
 import { withAuth0 } from '@auth0/auth0-react';
-import Main from "./Component/Main"
+import Main from "./Component/Main";
 import Header from './Component/Header';
 import Footer from './Component/Footer';
 import PC from './Component/PC';
@@ -36,14 +36,14 @@ class App extends React.Component {
               element={isAuthenticated && <Profile />}
             >
             </Route>
-            <Route
+            {/* <Route
               exact path="/"
               element={isAuthenticated && <Platforms />}
             >
-            </Route>
+            </Route> */}
             <Route
               exact path="/"
-              element={isAuthenticated && <Main />}
+              element={ <Main />}
             >
             </Route>
             <Route
@@ -112,3 +112,4 @@ class App extends React.Component {
   }
 }
 export default withAuth0(App);
+
