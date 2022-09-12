@@ -20,6 +20,7 @@ import Recently from './Component/Recently';
 import Top from './Component/Top';
 import Category from "./Component/Category"
 import Generate from './Component/Generate';
+import Support from './Component/Support';
 class App extends React.Component{
 
   render(){
@@ -77,7 +78,7 @@ class App extends React.Component{
             >
             </Route>
             <Route 
-              exact path="/ecently"
+              exact path="/recently"
               element={isAuthenticated && <Recently/>}
             >
             </Route>
@@ -89,6 +90,11 @@ class App extends React.Component{
             <Route 
               exact path="/category"
               element={isAuthenticated && <Category/>}
+            >
+            </Route>
+            <Route 
+              exact path="/Support"
+              element={isAuthenticated && <Support />}
             >
             </Route>
             </Routes>
