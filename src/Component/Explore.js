@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import { withAuth0 } from '@auth0/auth0-react';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import './alaa.css';
+import CardGroup from 'react-bootstrap/CardGroup';
 class Explore extends React.Component {
   constructor(props) {
     super(props);
@@ -58,29 +60,30 @@ class Explore extends React.Component {
 
   render() {
     return (
-      <div>
+      <CardGroup >
 
         {this.state.games.map((item) => {
           return (
             <div>
-              <Card style={{ width: "18rem" }}>
+              <Card style={{ width: "18rem" }} className="alaa2">
                 <Card.Img
                   variant="top"
                   src={item.image}
                   alt ="img"
+                  className="size"
                 />
-                <Card.Body>
+                <Card.Body className="cardbody">
                   <Card.Title>{item.name}</Card.Title>
                   <Card.Text>
                   Genres:  {item.genres.join(" - ")}
                   </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                    <ListGroup.Item>
+                    <ListGroup.Item className="listplatforms">
                         {item.parent_platforms.map((element) =>{
                             return (
                                 <div>
-                                   <h3>{element}</h3>
+                                   <h3 className="platforms">{element}</h3>
                                 </div>
                             )
                         })}
@@ -94,7 +97,7 @@ class Explore extends React.Component {
             </div>
           );
         })}
-      </div>
+      </CardGroup>
     );
   }
 }

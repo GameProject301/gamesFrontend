@@ -107,8 +107,9 @@ class CarouselRecommanded extends React.Component {
                             }} variant="warning" />
 
 
-                            <Button style={{
+                            <Button href="/explore" style={{
                                 margin: "0 15px"
+
                             }} variant="outline-warning">explor</Button>
 
                         </div>
