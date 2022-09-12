@@ -98,4 +98,6 @@ class Explore extends React.Component {
     );
   }
 }
+
 export default withAuth0(Explore);
+

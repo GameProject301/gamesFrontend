@@ -5,8 +5,11 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 import { withAuth0 } from "@auth0/auth0-react";
+
 import CardGroup from 'react-bootstrap/CardGroup';
 import './alaa.css';
+
+
 class Category extends React.Component {
   constructor(props) {
     super(props);
@@ -123,4 +126,8 @@ class Category extends React.Component {
     );
   }
 }
+
+
+
 export default withAuth0(Category);
+

@@ -4,7 +4,7 @@
 import React from 'react';
 import './App.css';
 import { withAuth0 } from '@auth0/auth0-react';
-import Main from "./Component/Main"
+import Main from "./Component/Main";
 import Header from './Component/Header';
 import Footer from './Component/Footer';
 import PC from './Component/PC';
@@ -20,87 +20,103 @@ import PlayStation from './Component/Playstation';
 import Explore from './Component/Explore';
 import Recently from './Component/Recently';
 import Top from './Component/Top';
-import Category from "./Component/Category"
+import Category from "./Component/Category";
 import Generate from './Component/Generate';
-class App extends React.Component{
+import Support from './Component/Support';
+class App extends React.Component {
 
-  render(){
-    const { isAuthenticated} = this.props.auth0;
+  render() {
+    const { isAuthenticated } = this.props.auth0;
 
-    return(
-<>
-<Router>
-  <Header />
-<Routes>
-<Route 
+    return (
+      <>
+        <Router>
+          <Header />
+          <Routes>
+            <Route
               exact path="/Profile"
               element={isAuthenticated && <Profile />}
             >
             </Route>
 
-            <Route 
+             <Route
+
               exact path="/"
               element={<Platforms />}
             >
+
               </Route>
             <Route 
               exact path="/main"
               element={isAuthenticated && <Main />}
-            >
-            </Route>
-            <Route 
-              exact path="/pc"
-              element={isAuthenticated && 
-              <>
-              <PC /> 
-              
-             <Generate />
-             </>
-             
 
-            }
+            </Route> 
+            
+            <Route
+              exact path="/pc"
+
+              element={isAuthenticated &&
+                <>
+                  <PC />
+
+                  <Generate />
+                </>
+              }
             >
             </Route>
-           
-            <Route 
+
+            <Route
+
               exact path="/mobile"
               element={isAuthenticated &&
                 <>
-                 <Mobile />
-                 <Generate />
-                 </>
-            }
+                  <Mobile />
+                  <Generate />
+                </>
+              }
             >
             </Route>
-            <Route 
+            <Route
               exact path="/playstation"
               element={isAuthenticated && <PlayStation />}
             >
             </Route>
-            <Route 
+            <Route
               exact path="/explore"
-              element={isAuthenticated && <Explore/>}
+              element={isAuthenticated && <Explore />}
             >
             </Route>
-            <Route 
-              exact path="/recently"
-              element={isAuthenticated && <Recently/>}
-            >
-            </Route>
-            <Route 
-              exact path="/top"
-              element={isAuthenticated && <Top/>}
-            >
-            </Route>
-            <Route 
-              exact path="/category"
-              element={isAuthenticated && <Category/>}
-            >
-            </Route>
-            </Routes>
 
-<Footer />
-            </Router>
+            <Route
+              exact path="/recently"
+              element={isAuthenticated && <Recently />}
+
+            >
+            </Route>
+            <Route
+              exact path="/top"
+              element={isAuthenticated && <Top />}
+            >
+            </Route>
+            <Route
+              exact path="/category"
+              element={isAuthenticated && <Category />}
+            >
+            </Route>
+            <Route
+              exact path="/profile"
+              element={isAuthenticated && <Profile />}
+            >
+            </Route>
+            <Route
+            exact path="/Support"
+            element={isAuthenticated && <Support />}
+            >
+          </Route>
+        </Routes>
+
+        <Footer />
+      </Router>
 </>
     )
   }
