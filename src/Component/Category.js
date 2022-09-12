@@ -5,6 +5,11 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 import { withAuth0 } from "@auth0/auth0-react";
+
+import CardGroup from 'react-bootstrap/CardGroup';
+import './alaa.css';
+
+
 class Category extends React.Component {
   constructor(props) {
     super(props);
@@ -79,23 +84,23 @@ class Category extends React.Component {
           <option value="educational">Educational</option>
         </Form.Select>
         {this.state.show && (
-          <div>
+          <CardGroup >
             {" "}
             {this.state.games.map((item) => {
               return (
                 <div>
-                  <Card style={{ width: "18rem" }}>
-                    <Card.Img variant="top" src={item.image} alt="img" />
-                    <Card.Body>
+                  <Card style={{ width: "18rem" }} className="alaa2">
+                    <Card.Img variant="top" src={item.image} alt="img"  className="size" />
+                    <Card.Body className="cardbody" >
                       <Card.Title>{item.name}</Card.Title>
                       <Card.Text>Genres: {item.genres.join(" - ")}</Card.Text>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                      <ListGroup.Item>
+                      <ListGroup.Item className="listplatforms">
                         {item.parent_platforms.map((element) => {
                           return (
                             <div>
-                              <h3>{element}</h3>
+                              <h3 className="platforms">>{element}</h3>
                             </div>
                           );
                         })}
@@ -115,10 +120,14 @@ class Category extends React.Component {
                 </div>
               );
             })}
-          </div>
+          </CardGroup>
         )}
       </div>
     );
   }
 }
+
+
+
 export default withAuth0(Category);
+

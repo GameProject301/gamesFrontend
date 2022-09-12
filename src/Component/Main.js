@@ -1,25 +1,32 @@
 import React from "react";
 import '../App.css';
+
+import Platforms from "./Platforms";
+import Category from "./Category";
+
 import CarouselRecommanded from './assets/CarouselRecommanded'
 
 
+
 class Main extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-          games: [],
-        };
-      }
+   
     
+
 render(){
 
 
-    
-    return (<div>
 
+    return (
+      <>
+      
 <CarouselRecommanded />
+      <Category/>
+      
+      {/* <Platforms/> */}
+      </>
 
-    </div>
+  
+
     )
 }
 

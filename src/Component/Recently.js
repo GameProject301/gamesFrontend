@@ -98,4 +98,6 @@ class Recently extends React.Component {
     );
   }
 }
+
 export default withAuth0(Recently);
+

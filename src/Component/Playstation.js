@@ -101,4 +101,5 @@ class PlayStation extends React.Component {
     );
   }
 }
+
 export default withAuth0(PlayStation);
