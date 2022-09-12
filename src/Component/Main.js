@@ -1,7 +1,6 @@
 import React from "react";
-import axios from "axios";
 import '../App.css';
-// import PC from "./PC";
+import CarouselRecommanded from './assets/CarouselRecommanded'
 
 
 class Main extends React.Component{
@@ -12,43 +11,15 @@ class Main extends React.Component{
         };
       }
     
-
-
-      componentDidMount = () => {
-        axios
-          .get(`${process.env.REACT_APP_URL}games`)
-          .then((result) => {
-            // console.log(result.data);
-            this.setState({
-              games: result.data,
-            });
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      };
-
 render(){
 
 
     
-    return (<div></div>
-    // <main className="main">
-    //   {this.state.games.map(item=>{
-    //           return (
-    //             <>
-    //               <h3>
+    return (<div>
 
-    //               <h3>{item.name}</h3>
+<CarouselRecommanded />
 
-    //               </h3>
-                  
-    //     </>
-    //   )})}
-    
-    // </main>
-    // <PC></PC>
-    
+    </div>
     )
 }
 
