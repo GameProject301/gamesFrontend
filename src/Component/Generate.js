@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import './alaa.css';
@@ -52,7 +51,7 @@ generateMore =async(e)=>{
     let page= this.state.page+1;
  
 axios
- .get(`http://localhost:3000/generate?&page=${page}`)
+ .get(`${process.env.REACT_APP_URL}generate?&page=${page}`)
 
   .then((result) => {
     console.log(result.data);
@@ -76,6 +75,7 @@ axios
 
 
 <Button className={this.state.className}onClick={this.generateMore}>loadmore</Button>
+
 {
 this.state.show &&
 <Button className={this.state.className2}onClick={this.generateLess}>previous</Button>

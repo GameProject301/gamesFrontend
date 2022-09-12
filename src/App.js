@@ -1,8 +1,10 @@
+
+
 'use strict';
 import React from 'react';
 import './App.css';
 import { withAuth0 } from '@auth0/auth0-react';
-import Main from "./Component/Main"
+import Main from "./Component/Main";
 import Header from './Component/Header';
 import Footer from './Component/Footer';
 import PC from './Component/PC';
@@ -21,6 +23,7 @@ import Top from './Component/Top';
 import Category from "./Component/Category";
 import Generate from './Component/Generate';
 import Support from './Component/Support';
+import CarouselRecommanded from './Component/assets/CarouselRecommanded';
 class App extends React.Component {
 
   render() {
@@ -30,24 +33,32 @@ class App extends React.Component {
       <>
         <Router>
           <Header />
+<CarouselRecommanded />
           <Routes>
+
+
             <Route
               exact path="/Profile"
               element={isAuthenticated && <Profile />}
             >
             </Route>
-            <Route
+
+             <Route
+
               exact path="/"
-              element={isAuthenticated && <Platforms />}
+              element={<Platforms />}
             >
-            </Route>
-            <Route
-              exact path="/"
+
+              </Route>
+            <Route 
+              exact path="/main"
               element={isAuthenticated && <Main />}
-            >
-            </Route>
+>
+            </Route> 
+            
             <Route
               exact path="/pc"
+
               element={isAuthenticated &&
                 <>
                   <PC />
@@ -59,6 +70,7 @@ class App extends React.Component {
             </Route>
 
             <Route
+
               exact path="/mobile"
               element={isAuthenticated &&
                 <>
@@ -75,12 +87,14 @@ class App extends React.Component {
             </Route>
             <Route
               exact path="/explore"
-              element={isAuthenticated && <Explore />}
+              element={<Explore />}
             >
             </Route>
+
             <Route
               exact path="/recently"
               element={isAuthenticated && <Recently />}
+
             >
             </Route>
             <Route

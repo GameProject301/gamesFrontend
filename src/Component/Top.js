@@ -97,4 +97,6 @@ class Top extends React.Component {
     );
   }
 }
+
 export default withAuth0(Top);
+

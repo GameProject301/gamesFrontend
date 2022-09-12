@@ -108,4 +108,6 @@ class PC extends React.Component {
     );
   }
 }
+
 export default  withAuth0(PC);
+
