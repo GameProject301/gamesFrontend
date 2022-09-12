@@ -1,3 +1,4 @@
+'use strict';
 import React from 'react';
 import './App.css';
 import { withAuth0 } from '@auth0/auth0-react';
@@ -5,6 +6,8 @@ import Main from "./Component/Main"
 import Header from './Component/Header';
 import Footer from './Component/Footer';
 import PC from './Component/PC';
+import Platforms from './Component/Platforms';
+import Profile from './Component/Profile';
 import {
   BrowserRouter as Router,
   Routes,
@@ -18,6 +21,8 @@ import Top from './Component/Top';
 import Category from "./Component/Category"
 import Profile from './Component/Profile';
 import MyList from './Component/myList';
+import Generate from './Component/Generate';
+import Support from './Component/Support';
 class App extends React.Component{
 
   render(){
@@ -28,6 +33,16 @@ class App extends React.Component{
 <Router>
   <Header />
 <Routes>
+<Route 
+              exact path="/Profile"
+              element={isAuthenticated && <Profile />}
+            >
+            </Route>
+<Route 
+              exact path="/"
+              element={isAuthenticated && <Platforms />}
+            >
+              </Route>
             <Route 
               exact path="/"
               element={isAuthenticated && <Main />}
@@ -35,13 +50,24 @@ class App extends React.Component{
             </Route>
             <Route 
               exact path="/pc"
-              element={isAuthenticated && <PC />}
+              element={isAuthenticated && 
+              <>
+              <PC /> 
+              
+             <Generate />
+             </>
+            }
             >
             </Route>
             
             <Route 
               exact path="/mobile"
-              element={isAuthenticated && <Mobile />}
+              element={isAuthenticated &&
+                <>
+                 <Mobile />
+                 <Generate />
+                 </>
+            }
             >
             </Route>
             <Route 
@@ -75,6 +101,10 @@ class App extends React.Component{
             >
             </Route>
            
+              exact path="/Support"
+              element={isAuthenticated && <Support />}
+            >
+            </Route>
             </Routes>
 
 <Footer />

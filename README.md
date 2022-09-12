@@ -33,3 +33,12 @@ work in githup to check if it works.
 it using small item to manage our project.
 10. Abdallah make the [Netlify](https://pro-player.netlify.app/) link of Frontend side.
 11. Ismail make PC component
+12. alaa  Add Auth0 ,so that our application can use the authentication service and Utilize the `AuthButtons` component in  `Header`. and show `Login` to users not signed in. When a signed-in user clicks the logout button, it  log the user out of the application.
+
+13. alaa and bashar: back-end: add a route that get the result from api with number of page , every increment 
+for number of the page it rendering anthor json file with differnt games. 
+
+14. alaa and bashar front-end: add a generate component that when the user click load more it's increment the state of number of the page so , loding extra games that not appear in the main , also when user click previous it retrun to previous games,and do some styling.
+
+15. alaa and bashar front-end:add platforms that have a list with link for each platforms and show the links in the home page.
+15.  alaa and bashar:add a profile component so when the user logged in  and user click on the profile in the header will show his userName .

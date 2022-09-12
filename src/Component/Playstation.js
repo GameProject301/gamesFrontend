@@ -2,8 +2,10 @@ import React from "react";
 import axios from "axios";
 import Button from 'react-bootstrap/Button';
 import { withAuth0 } from '@auth0/auth0-react';
+import CardGroup from 'react-bootstrap/CardGroup';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import './alaa.css';
 class PlayStation extends React.Component {
   constructor(props) {
     super(props);
@@ -58,7 +60,7 @@ class PlayStation extends React.Component {
 
   render() {
     return (
-      <div>
+      <CardGroup>
 
         {this.state.games.map((item) => {
           return (
@@ -68,19 +70,20 @@ class PlayStation extends React.Component {
                   variant="top"
                   src={item.image}
                   alt ="img"
+                  className="size"
                 />
-                <Card.Body>
+                <Card.Body className="cardbody">
                   <Card.Title>{item.name}</Card.Title>
                   <Card.Text>
                   Genres:  {item.genres.join(" - ")}
                   </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                    <ListGroup.Item>
+                    <ListGroup.Item className="listplatforms">
                         {item.parent_platforms.map((element) =>{
                             return (
                                 <div>
-                                   <h3>{element}</h3>
+                                   <h3 className="platforms">{element}</h3>
                                 </div>
                             )
                         })}
@@ -94,7 +97,7 @@ class PlayStation extends React.Component {
             </div>
           );
         })}
-      </div>
+      </CardGroup>
     );
   }
 }
