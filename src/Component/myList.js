@@ -2,49 +2,37 @@ import React from "react";
 import axios from "axios";
 import Button from 'react-bootstrap/Button';
 import { withAuth0 } from '@auth0/auth0-react';
-import CardGroup from 'react-bootstrap/CardGroup';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import './alaa.css';
-class Mobile extends React.Component {
+class MyList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      games: [],
-      parent_platforms: "4,8",
+      games: []
+    
     };
   }
-  addGames = (item)=>{
- 
+  deleteGame = (id) => {
     const { user } = this.props.auth0;
-    let obj ={
-        name: item.name,
-        image: item.image,
-        platforms: item.parent_platforms,
-        metacritic: item.metacritic,
-        genres: item.genres,
-        email: user.email
-    }
-    console.log(obj)
-    
+    let email =user.email
     axios
-    .post(`${process.env.REACT_APP_URL}games`, obj)
-    .then((result) => {
-      // this.setState({
-      //   showButton:true,
-      // });
-      alert("Game added")
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-
-  }
+      .delete(`${process.env.REACT_APP_URL}games/${id}?email=${email}`)
+      .then((result) => {
+        this.setState({
+          games: result.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   componentDidMount = () => {
+    const { user } = this.props.auth0;
+    let email =user.email
    console.log("hi")
     axios
       .get(
-        `${process.env.REACT_APP_URL}games?parent_platforms=${this.state.parent_platforms}`
+        `${process.env.REACT_APP_URL}mylist?email=${email}`
       )
    
       .then((result) => {
@@ -60,7 +48,7 @@ class Mobile extends React.Component {
 
   render() {
     return (
-      <CardGroup>
+      <div>
 
         {this.state.games.map((item) => {
           return (
@@ -70,26 +58,25 @@ class Mobile extends React.Component {
                   variant="top"
                   src={item.image}
                   alt ="img"
-                  className="size"
                 />
-                <Card.Body className="cardbody">
+                <Card.Body>
                   <Card.Title>{item.name}</Card.Title>
                   <Card.Text>
                   Genres:  {item.genres.join(" - ")}
                   </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                    <ListGroup.Item className="listplatforms">
-                        {item.parent_platforms.map((element) =>{
+                    <ListGroup.Item>
+                        {item.platforms.map((element) =>{
                             return (
                                 <div>
-                                   <h3 className="platforms">{element}</h3>
+                                   <h3>{element}</h3>
                                 </div>
                             )
                         })}
                  </ListGroup.Item>
                  <ListGroup.Item> metacritic : {item.metacritic}</ListGroup.Item>
-                 <Button onClick={() => this.addGames(item)} variant="outline-danger">♥</Button>{' '}
+                 <Button onClick={() => this.deleteGame(item._id)} variant="outline-danger">delete</Button>{' '}
 
                 </ListGroup>
                
@@ -97,8 +84,8 @@ class Mobile extends React.Component {
             </div>
           );
         })}
-      </CardGroup>
+      </div>
     );
   }
 }
-export default  withAuth0 (Mobile);
+export default  withAuth0 (MyList);

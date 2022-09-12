@@ -19,6 +19,8 @@ import Explore from './Component/Explore';
 import Recently from './Component/Recently';
 import Top from './Component/Top';
 import Category from "./Component/Category"
+import Profile from './Component/Profile';
+import MyList from './Component/myList';
 import Generate from './Component/Generate';
 import Support from './Component/Support';
 class App extends React.Component{
@@ -57,6 +59,7 @@ class App extends React.Component{
             }
             >
             </Route>
+            
             <Route 
               exact path="/mobile"
               element={isAuthenticated &&
@@ -93,6 +96,11 @@ class App extends React.Component{
             >
             </Route>
             <Route 
+              exact path="/profile"
+              element={isAuthenticated && <Profile/>}
+            >
+            </Route>
+           
               exact path="/Support"
               element={isAuthenticated && <Support />}
             >
