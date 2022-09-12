@@ -18,97 +18,95 @@ import PlayStation from './Component/Playstation';
 import Explore from './Component/Explore';
 import Recently from './Component/Recently';
 import Top from './Component/Top';
-import Category from "./Component/Category"
-import Profile from './Component/Profile';
-import MyList from './Component/myList';
+import Category from "./Component/Category";
 import Generate from './Component/Generate';
 import Support from './Component/Support';
-class App extends React.Component{
+class App extends React.Component {
 
-  render(){
-    const { isAuthenticated} = this.props.auth0;
+  render() {
+    const { isAuthenticated } = this.props.auth0;
 
-    return(
-<>
-<Router>
-  <Header />
-<Routes>
-<Route 
+    return (
+      <>
+        <Router>
+          <Header />
+          <Routes>
+            <Route
               exact path="/Profile"
               element={isAuthenticated && <Profile />}
             >
             </Route>
-<Route 
+            <Route
               exact path="/"
               element={isAuthenticated && <Platforms />}
             >
-              </Route>
-            <Route 
+            </Route>
+            <Route
               exact path="/"
               element={isAuthenticated && <Main />}
             >
             </Route>
-            <Route 
+            <Route
               exact path="/pc"
-              element={isAuthenticated && 
-              <>
-              <PC /> 
-              
-             <Generate />
-             </>
-            }
+              element={isAuthenticated &&
+                <>
+                  <PC />
+
+                  <Generate />
+                </>
+              }
             >
             </Route>
-            
-            <Route 
+
+            <Route
               exact path="/mobile"
               element={isAuthenticated &&
                 <>
-                 <Mobile />
-                 <Generate />
-                 </>
-            }
+                  <Mobile />
+                  <Generate />
+                </>
+              }
             >
             </Route>
-            <Route 
+            <Route
               exact path="/playstation"
               element={isAuthenticated && <PlayStation />}
             >
             </Route>
-            <Route 
+            <Route
               exact path="/explore"
-              element={isAuthenticated && <Explore/>}
+              element={isAuthenticated && <Explore />}
             >
             </Route>
-            <Route 
+            <Route
               exact path="/recently"
-              element={isAuthenticated && <Recently/>}
+              element={isAuthenticated && <Recently />}
             >
             </Route>
-            <Route 
+            <Route
               exact path="/top"
-              element={isAuthenticated && <Top/>}
+              element={isAuthenticated && <Top />}
             >
             </Route>
-            <Route 
+            <Route
               exact path="/category"
-              element={isAuthenticated && <Category/>}
+              element={isAuthenticated && <Category />}
             >
             </Route>
-            <Route 
+            <Route
               exact path="/profile"
-              element={isAuthenticated && <Profile/>}
+              element={isAuthenticated && <Profile />}
             >
             </Route>
-           
-              exact path="/Support"
-              element={isAuthenticated && <Support />}
+            <Route
+            exact path="/Support"
+            element={isAuthenticated && <Support />}
             >
-            </Route>
-            </Routes>
+          </Route>
+        </Routes>
 
-<Footer />
-            </Router>
+        <Footer />
+      </Router>
 </>
     )
   }
