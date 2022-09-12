@@ -9,6 +9,7 @@ class Platforms extends React.Component{
     <li><a href="./pc">pc 🖥️</a></li>
     <li><a href="./Mobile">Mobile 📱</a></li>
     <li><a href="./PlayStation">playStation 🎮</a></li>
+    <li><a href="./Support"> Support 📧</a></li>
 
 </ul>
             </>
