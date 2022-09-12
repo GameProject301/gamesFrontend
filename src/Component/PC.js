@@ -1,17 +1,45 @@
 import React from "react";
 import axios from "axios";
-
+import { withAuth0 } from '@auth0/auth0-react';
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import Form from 'react-bootstrap/Form';
 class PC extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       games: [],
       parent_platforms: "1",
+      // showButton : false
     };
   }
+  addGames = (item)=>{
+ 
+    const { user } = this.props.auth0;
+    let obj ={
+        name: item.name,
+        image: item.image,
+        platforms: item.parent_platforms,
+        metacritic: item.metacritic,
+        genres: item.genres,
+        email: user.email
+    }
+    console.log(obj)
+    
+    axios
+    .post(`${process.env.REACT_APP_URL}games`, obj)
+    .then((result) => {
+      // this.setState({
+      //   showButton:true,
+      // });
+      alert("Game added")
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 
+  }
   componentDidMount = () => {
    console.log("hi")
     axios
@@ -35,9 +63,12 @@ class PC extends React.Component {
       <div>
 
         {this.state.games.map((item) => {
+
           return (
             <div>
+                   
               <Card style={{ width: "18rem" }}>
+            
                 <Card.Img
                   variant="top"
                   src={item.image}
@@ -60,13 +91,12 @@ class PC extends React.Component {
                         })}
                  </ListGroup.Item>
                  <ListGroup.Item> metacritic : {item.metacritic}</ListGroup.Item>
-                
+                    <Button onClick={() => this.addGames(item)} variant="outline-danger">♥</Button>{' '}
+                 
                 </ListGroup>
-                <Card.Body>
-                  <Card.Link href="#">Card Link</Card.Link>
-                  <Card.Link href="#">Another Link</Card.Link>
-                </Card.Body>
+                
               </Card>
+            
             </div>
           );
         })}
@@ -74,4 +104,4 @@ class PC extends React.Component {
     );
   }
 }
-export default PC;
+export default  withAuth0(PC);

@@ -16,6 +16,8 @@ import Explore from './Component/Explore';
 import Recently from './Component/Recently';
 import Top from './Component/Top';
 import Category from "./Component/Category"
+import Profile from './Component/Profile';
+import MyList from './Component/myList';
 class App extends React.Component{
 
   render(){
@@ -36,6 +38,7 @@ class App extends React.Component{
               element={isAuthenticated && <PC />}
             >
             </Route>
+            
             <Route 
               exact path="/mobile"
               element={isAuthenticated && <Mobile />}
@@ -52,7 +55,7 @@ class App extends React.Component{
             >
             </Route>
             <Route 
-              exact path="/ecently"
+              exact path="/recently"
               element={isAuthenticated && <Recently/>}
             >
             </Route>
@@ -66,6 +69,12 @@ class App extends React.Component{
               element={isAuthenticated && <Category/>}
             >
             </Route>
+            <Route 
+              exact path="/profile"
+              element={isAuthenticated && <Profile/>}
+            >
+            </Route>
+           
             </Routes>
 
 <Footer />
