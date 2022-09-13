@@ -100,7 +100,7 @@ class Category extends React.Component {
                         {item.parent_platforms.map((element) => {
                           return (
                             <div>
-                              <h3 className="platforms">>{element}</h3>
+                              <h3 className="platforms">{element}</h3>
                             </div>
                           );
                         })}
