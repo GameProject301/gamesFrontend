@@ -4,6 +4,8 @@ import './alaa.css';
 import { withAuth0 } from '@auth0/auth0-react';
 import { Link } from "react-router-dom";
 import { axios } from "axios";
+import Swal from 'sweetalert2'
+
 class Platforms extends React.Component{
     
     constructor(props){
@@ -17,7 +19,15 @@ class Platforms extends React.Component{
     }
 isNotAuth=(e)=>{
     e.preventDefault();
-alert("you should log in");
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'you should log in ',
+        confirmButtonColor: '#ffbe33',
+        background:'#212529',
+        iconColor:'#ffbe33',
+        color:'rgb(248, 239, 239)'
+      })
 }
 
 isAuth=(e)=>{

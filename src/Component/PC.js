@@ -8,6 +8,7 @@ import './alaa.css';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Form from 'react-bootstrap/Form';
+import Swal from 'sweetalert2'
 class PC extends React.Component {
   constructor(props) {
     super(props);
@@ -36,7 +37,17 @@ class PC extends React.Component {
       // this.setState({
       //   showButton:true,
       // });
-      alert("Game added")
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        text: 'Added successflly ',
+        showConfirmButton: false,
+        timer: 1500,
+        confirmButtonColor: '#ffbe33',
+        background:'#212529',
+        iconColor:'#ffbe33',
+        color:'rgb(248, 239, 239)'
+      })
     })
     .catch((err) => {
       console.log(err);
