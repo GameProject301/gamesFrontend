@@ -7,14 +7,14 @@ import LogoutButton from "./LogoutButton";
 import Welcome from "./Welcome";
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-
+import { withAuth0 } from '@auth0/auth0-react';
 
 
 
 class Header extends React.Component {
 
     render() {
-
+        const { isAuthenticated } = this.props.auth0;
         return (
 
 
@@ -48,15 +48,18 @@ class Header extends React.Component {
                                 <Nav.Link href="/explore">Explore</Nav.Link>
                                 <Nav.Link href="/about">About</Nav.Link>
 
+                               
                                 <Nav.Link href="./" style={{ padding: "0 12px" }}><LoginButton /></Nav.Link>
+                                {isAuthenticated &&
                                 <NavDropdown title={<Welcome />} id="basic-nav-dropdown">
                                     <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item href="/support">
                                         Support
                                     </NavDropdown.Item>
-
+                                
                                 </NavDropdown>
+    }
                                 <NavItem ><LogoutButton /></NavItem>
 
                             </Nav>
@@ -68,4 +71,4 @@ class Header extends React.Component {
         )
     }
 }
-export default Header;
+export default withAuth0(Header);

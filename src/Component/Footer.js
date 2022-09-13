@@ -57,7 +57,7 @@ class Footer extends React.Component {
                 className='bg-image hover-overlay shadow-1-strong rounded'
               >
                 <a href='https://www.nvidia.com/en-us/' target="_blank">
-                <img src='https://www.logo.wine/a/logo/Nvidia/Nvidia-White-Horizontal-Dark-Background-Logo.wine.svg' className='foot_img' />
+                <img src='https://www.nvidia.com/content/dam/en-zz/Solutions/about-nvidia/logo-and-brand/02-nvidia-logo-color-blk-500x200-4c25-p@2x.png' className='foot_img' />
                   <div
                     className='mask'
                     style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}
