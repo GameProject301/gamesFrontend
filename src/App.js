@@ -25,7 +25,7 @@ import About from './Component/About';
 import Interested from './Component/Interested';
 
 class App extends React.Component {
-// 
+
   render() {
     const { isAuthenticated } = this.props.auth0;
 
@@ -129,7 +129,6 @@ class App extends React.Component {
           </Route>
         
         </Routes>
-        {/* <Footer /> */}
         <Footer />
       </Router>
 </>
