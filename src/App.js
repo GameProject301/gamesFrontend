@@ -23,7 +23,8 @@ import Support from './Component/Support';
 import CarouselRecommanded from './Component/assets/CarouselRecommanded';
 import About from './Component/About';
 import Interested from './Component/Interested';
-
+import TopSlider from "./Component/TopSlider";
+import Sidebar from "./Component/Sidebar";
 class App extends React.Component {
 // 
   render() {
@@ -33,26 +34,32 @@ class App extends React.Component {
       <>
         <Router>
           <Header />
-<CarouselRecommanded />
           <Routes>
 
 
             <Route
               exact path="/Profile"
-              element={isAuthenticated && <Profile />}
+              element={isAuthenticated &&
+              <Profile />
+              }
             >
             </Route>
 
              <Route
-
               exact path="/"
-              element={<Platforms />}
+              element={
+              <><CarouselRecommanded />
+              <Platforms />
+              </>}
             >
 
               </Route>
             <Route 
               exact path="/main"
-              element={isAuthenticated && <Main />}
+              element={isAuthenticated && <><CarouselRecommanded />
+               <Main />
+               <Platforms />
+               </>}
 >
             </Route> 
             
@@ -60,9 +67,9 @@ class App extends React.Component {
               exact path="/pc"
 
               element={isAuthenticated &&
-                <>
-                  <PC />
-
+                <>   
+                <Sidebar />
+                                  <PC />
                   <Generate />
                 </>
               }
@@ -73,7 +80,8 @@ class App extends React.Component {
 
               exact path="/mobile"
               element={isAuthenticated &&
-                <>
+                <>   <Sidebar />
+                
                   <Mobile />
                   <Generate />
                 </>
@@ -82,31 +90,48 @@ class App extends React.Component {
             </Route>
             <Route
               exact path="/playstation"
-              element={isAuthenticated && <PlayStation />}
+              element={isAuthenticated && <><PlayStation />
+              <Generate />
+              </>}
             >
             </Route>
             <Route
               exact path="/explore"
-              element={<Explore />}
+              element={
+              <> 
+              <CarouselRecommanded />
+              <Explore />
+             
+            </>
+            }
             >
             </Route>
 
             <Route
               exact path="/recently"
-              element={isAuthenticated && <Recently />}
+              element={isAuthenticated &&<><CarouselRecommanded /> <Recently /></>}
 
             >
             </Route>
             <Route
               exact path="/top"
-              element={isAuthenticated && <Top />}
+              element={isAuthenticated &&  <>   <Sidebar />
+              <Top />
+              </>
+              }
             >
             </Route>
             <Route
               exact path="/category"
-              element={isAuthenticated && <Category />}
+              element={isAuthenticated && 
+              <>
+            <TopSlider/>
+              <Category />
+              </>}
             >
             </Route>
+
+
             <Route
               exact path="/profile"
               element={isAuthenticated && <Profile />}

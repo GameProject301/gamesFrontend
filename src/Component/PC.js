@@ -2,13 +2,11 @@ import React from "react";
 import axios from "axios";
 import { withAuth0 } from '@auth0/auth0-react';
 import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
 import CardGroup from 'react-bootstrap/CardGroup';
 import './alaa.css';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import Form from 'react-bootstrap/Form';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 class PC extends React.Component {
   constructor(props) {
     super(props);
@@ -74,8 +72,10 @@ class PC extends React.Component {
 
   render() {
     return (
-      // <Row xs={1} md={4} className="g-4">
-<CardGroup>
+      <div style={{marginTop:"100px"}}>
+        <div style={{ marginLeft: "20%", padding:"0" }}>
+
+        <CardGroup>
         {this.state.games.map((item) => {
 
           return (
@@ -116,6 +116,10 @@ class PC extends React.Component {
           );
         })}
       </CardGroup>
+
+          </div>
+
+        </div>
     );
   }
 }
