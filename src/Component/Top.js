@@ -58,7 +58,8 @@ class Top extends React.Component {
 
   render() {
     return (
-      <div>
+
+      <div style={{ marginLeft: "20%", padding:"0" }}>
 
         {this.state.games.map((item) => {
           return (

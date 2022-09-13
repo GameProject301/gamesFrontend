@@ -60,6 +60,8 @@ class PlayStation extends React.Component {
 
   render() {
     return (
+      <div style={{ marginLeft: "20%", padding:"0" }}>
+
       <CardGroup>
 
         {this.state.games.map((item) => {
@@ -95,9 +97,11 @@ class PlayStation extends React.Component {
                 
               </Card>
             </div>
+
           );
         })}
       </CardGroup>
+      </div>
     );
   }
 }

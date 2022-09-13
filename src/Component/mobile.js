@@ -60,6 +60,8 @@ class Mobile extends React.Component {
 
   render() {
     return (
+      <div style={{ marginLeft: "20%", padding:"0" }}>
+
       <CardGroup>
 
         {this.state.games.map((item) => {
@@ -98,6 +100,8 @@ class Mobile extends React.Component {
           );
         })}
       </CardGroup>
+      </div>
+
     );
   }
 }
