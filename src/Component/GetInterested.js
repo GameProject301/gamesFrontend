@@ -7,7 +7,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import ShowUpdate from "./ShowUpdate";
 import Badge from 'react-bootstrap/Badge';
-
+//gfdgdf
 class GetINterested extends React.Component {
   constructor(props) {
     super(props);
@@ -93,7 +93,7 @@ class GetINterested extends React.Component {
            
           );
         })}
-        
+       
         <Button variant="warning" onClick={() => this.openModal()}>
           update
         </Button>
