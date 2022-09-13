@@ -22,6 +22,8 @@ import Generate from './Component/Generate';
 import Support from './Component/Support';
 import CarouselRecommanded from './Component/assets/CarouselRecommanded';
 import About from './Component/About';
+import Interested from './Component/Interested';
+
 class App extends React.Component {
 
   render() {
@@ -120,6 +122,12 @@ class App extends React.Component {
             element={<About />}
             >
           </Route>
+          <Route
+            exact path="/interested"
+            element={<Interested />}
+            >
+          </Route>
+        
         </Routes>
 
         <Footer />
