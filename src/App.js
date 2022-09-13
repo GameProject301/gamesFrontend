@@ -1,6 +1,3 @@
-
-
-'use strict';
 import React from 'react';
 import './App.css';
 import { withAuth0 } from '@auth0/auth0-react';
@@ -24,6 +21,7 @@ import Category from "./Component/Category";
 import Generate from './Component/Generate';
 import Support from './Component/Support';
 import CarouselRecommanded from './Component/assets/CarouselRecommanded';
+import About from './Component/About';
 class App extends React.Component {
 
   render() {
@@ -115,6 +113,11 @@ class App extends React.Component {
             <Route
             exact path="/Support"
             element={isAuthenticated && <Support />}
+            >
+          </Route>
+          <Route
+            exact path="/about"
+            element={<About />}
             >
           </Route>
         </Routes>
