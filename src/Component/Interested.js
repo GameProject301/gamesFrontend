@@ -89,46 +89,46 @@ class Interested extends React.Component {
                   <Col xs={6} md={4}>
              
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Racing"  name="Interested" value="Racing"/>
+                      <Form.Check type="checkbox" label="Racing"  name="Interested" value=" Racing ,"/>
                     </Form.Group>
                   </Col>
                   <Col xs={6} md={4}>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Strategy" name="Interested" value="Strategy" />
+                      <Form.Check type="checkbox" label="Strategy" name="Interested" value=" Strategy ," />
                     </Form.Group>
                   </Col>
                   <Col xs={6} md={4}>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Card"  name="Interested" value ="Card"/>
-                    </Form.Group>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col xs={6} md={4}>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Puzzle" name="Interested" value="Puzzle" />
-                    </Form.Group>
-                  </Col>
-                  <Col xs={6} md={4}>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Arcade" name="Interested" value="Arcade"/>
-                    </Form.Group>
-                  </Col>
-                  <Col xs={6} md={4}>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Action" name="Interested"  value="Action"/>
+                      <Form.Check type="checkbox" label="Card"  name="Interested" value =" Card ,"/>
                     </Form.Group>
                   </Col>
                 </Row>
                 <Row>
                   <Col xs={6} md={4}>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Family"  name="Interested" value="Family"/>
+                      <Form.Check type="checkbox" label="Puzzle" name="Interested" value=" Puzzle ," />
                     </Form.Group>
                   </Col>
                   <Col xs={6} md={4}>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Educational" name="Interested" value="Educational" />
+                      <Form.Check type="checkbox" label="Arcade" name="Interested" value=" Arcade ,"/>
+                    </Form.Group>
+                  </Col>
+                  <Col xs={6} md={4}>
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                      <Form.Check type="checkbox" label="Action" name="Interested"  value=" Action ,"/>
+                    </Form.Group>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={6} md={4}>
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                      <Form.Check type="checkbox" label="Family"  name="Interested" value=" Family ,"/>
+                    </Form.Group>
+                  </Col>
+                  <Col xs={6} md={4}>
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                      <Form.Check type="checkbox" label="Educational" name="Interested" value=" Educational ," />
                     </Form.Group>
                   </Col>
                 </Row>  
