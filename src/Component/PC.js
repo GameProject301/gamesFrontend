@@ -84,6 +84,7 @@ class PC extends React.Component {
               <Card style={{ width: "18rem" }}>
             
                 <Card.Img
+                
                   variant="top"
                   src={item.image}
                   alt ="img"
@@ -105,7 +106,7 @@ class PC extends React.Component {
                             )
                         })}
                  </ListGroup.Item>
-                 <ListGroup.Item> metacritic : {item.metacritic}</ListGroup.Item>
+                 <ListGroup.Item className="metacriticStyle"> metacritic : {item.metacritic} </ListGroup.Item>
                     <Button onClick={() => this.addGames(item)} variant="outline-danger">♥</Button>{' '}
                  
                 </ListGroup>

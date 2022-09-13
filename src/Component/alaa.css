@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Combo&family=Roboto+Condensed:ital,wght@1,700&display=swap');
 
 .card { background-color: rgba(245, 245, 245, 0.4); }
-.card-header, .card-footer ,.listplatforms{ opacity: .5}
+
 
 h1{
   font-family: 'Combo', cursive;
@@ -22,6 +22,7 @@ text-align: center;
 .size{
     width: 285px;
     height: 160px;
+    background-color:#212529 !important ;
 }
 .size2{
     width: 285px;
@@ -32,11 +33,17 @@ text-align: center;
 }
 .listplatforms{
   height: 160px;
+  background-color: #212529 !important ;
+  color : #FFC107 !important;  
 }
 .cardbody{
     height: 160px;
-
+    background-color: #212529 !important;
+    color : #FFC107 !important; 
 }
+.metacriticStyle{
+    background-color: #212529 !important;
+    color : #FFC107 !important;}
 
 .platfomrslist li a{
     text-decoration: none;
@@ -113,4 +120,5 @@ text-align: center;
   a{
     cursor: pointer;
   }
+  
 
