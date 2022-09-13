@@ -129,7 +129,7 @@ class App extends React.Component {
           </Route>
         
         </Routes>
-
+        {/* <Footer /> */}
         <Footer />
       </Router>
 </>
