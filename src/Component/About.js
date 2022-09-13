@@ -6,9 +6,9 @@ class About extends React.Component{
     render(){
   return (
     <div className='us'>
-    <Card className="person1" style={{ width: '18rem' }}>
+    <Card className="person1" style={{ width: '18rem' } }>
       <Card.Img variant="top" src="https://avatars.GitHubusercontent.com/u/109727654?v=4" />
-      <Card.Body>
+      <Card.Body className='bodyCard'>
         <Card.Title>Abdallah Mousa</Card.Title>
         <Card.Text>
           <h5>SoftWare Developer</h5>
