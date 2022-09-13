@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-target-blank */
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import {
   MDBFooter,
@@ -17,7 +19,7 @@ class Footer extends React.Component {
 
 
    <section>
-    <MDBFooter className='text-center text-white' style={{ backgroundColor: '#FFCA2C' }}>
+    <MDBFooter className='text-center text-white' style={{ backgroundColor: '#2e3a46' }}>
       <MDBContainer className='p-4'>
         <section className=''>
           <div className='footer_row'>
@@ -97,12 +99,21 @@ class Footer extends React.Component {
         </section>
       </MDBContainer>
 
-      <div style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)', height:'25px' }}>
+      <div style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)', height:'10px' }}>
         <a className='text-white' href='https://github.com/GameProject301'>
          <p className="copyright_text">© 2022 GAME PROJECT, Inc. All Rights Reserved / 301 Game Project
          <span className='icons_span'>
-         <a className='sc_icon' href='https://www.facebook.com/Pro-player-Website-105079872354301' target='_blank'><FontAwesomeIcon icon={faFacebook} /></a>
-         <a className='sc_icon' href='https://www.instagram.com/proplayers99s/' target='_blank'><FontAwesomeIcon icon={faInstagram} /></a></span></p>
+         {/* <a className='sc_icon' href='https://www.facebook.com/Pro-player-Website-105079872354301' target='_blank'><FontAwesomeIcon icon={faFacebook} /></a>
+         <a className='sc_icon' href='https://www.instagram.com/proplayers99s/' target='_blank'><FontAwesomeIcon icon={faInstagram} /></a> */}
+         <a className='sc_icon' href="https://www.facebook.com/Pro-player-Website-105079872354301" target='_blank' el='noreferrer noopener'
+        className="facebookSocial"  rel="noreferrer">
+        <FontAwesomeIcon icon={faFacebook} size="3x" color='#141b22' />
+      </a>
+      <a className='sc_icon' href="https://www.instagram.com/proplayers99s/" target='_blank' el='noreferrer noopener' className="instagramSocial" rel='noreferrer'>
+        <FontAwesomeIcon icon={faInstagram} size="3x" color='#141b22' />
+      </a>
+         
+         </span></p>
         </a>
       </div>
     </MDBFooter>

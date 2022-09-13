@@ -3,11 +3,12 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #0c0c0c;
-  background-image: url("https://images.unsplash.com/photo-1608690158878-1a96b29b455b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NTN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+  /* background-image: url("https://images.unsplash.com/photo-1608690158878-1a96b29b455b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NTN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"); */
   overflow-x: hidden;
 
-  background-image: url("https://i.pinimg.com/736x/f2/2f/1d/f22f1d358d5a3a84164607e30d828753.jpg");
+  /* background-image: url("https://i.pinimg.com/736x/f2/2f/1d/f22f1d358d5a3a84164607e30d828753.jpg"); */
   background-size: cover;
+  background-color: #212529 !important;
 
 
 }

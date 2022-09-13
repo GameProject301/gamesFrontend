@@ -40,11 +40,11 @@ const Support = () => {
         </Form.Group>
       </Form>
       <a href="https://www.facebook.com/Pro-player-Website-105079872354301" target='_blank' el='noreferrer noopener'
-        className="facebookSocial" el='noreferrer' rel="noreferrer">
-        <FontAwesomeIcon icon={faFacebook} size="4x" />
+        className="facebookSocial"  rel="noreferrer">
+        <FontAwesomeIcon icon={faFacebook} size="4x" color='black' />
       </a>
       <a href="https://www.instagram.com/proplayers99s/" target='_blank' el='noreferrer noopener' className="instagramSocial" rel='noreferrer'>
-        <FontAwesomeIcon icon={faInstagram} size="4x" />
+        <FontAwesomeIcon icon={faInstagram} size="4x" color='black' />
       </a>
       </>
     );
