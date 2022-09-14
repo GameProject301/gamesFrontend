@@ -1,8 +1,6 @@
 import React from "react";
 import "./styles/siderbar.css";
 import { Link } from 'react-router-dom';
-
-import { withRouter } from "react-router-dom";
 import { MdEmail as MailIcon, MdInbox as InboxIcon } from "react-icons/md";
 import {
   Drawer as MUIDrawer,
@@ -13,25 +11,23 @@ import {
   makeStyles,
   Divider,
   Toolbar,
+
 } from "@material-ui/core";
 import {
   FaFireAlt,
   FaPlaystation,
   FaStar,
   FaWindows,
-  FaXbox,
+  FaMobile,
+  FaCertificate ,
+  FaRegObjectGroup,
+  FaUmbrellaBeach,
 } from "react-icons/fa";
 import { BsFillSkipForwardFill } from "react-icons/bs";
-import ActionIcon from "./images/actionIcon.jpg";
-import AdventureIcon from "./images/Adventure.jpg";
-import ShooterIcon from "./images/shootergameimage.jpg";
-import StrategyIcon from "./images/Strategy.jpg";
-import RacingIcon from "./images/RacingIcon.jpg";
-import FightingIcon from "./images/FightingIcon.jpg";
+import Interested from "./Interested";
 
 const useStyles = makeStyles({
   drawer: {
-    
     width: "250px",
     zIndex: "1",
     ['@media (max-width:768px)']: { // eslint-disable-line no-useless-computed-key
@@ -59,92 +55,58 @@ const useStyles = makeStyles({
     }
   },
 });
-
 const Sidebar = (props) => {
   const { history } = props;
   const classes = useStyles();
-
 const Releases = [
+  {
+    text: "Home",
+    icon: <InboxIcon />,
+  },
+  {
+    text: "profile",
+    icon: <FaUmbrellaBeach />,
+  },
+    {
+      text: "explore",
+      icon: <BsFillSkipForwardFill  />,
+    },
     {
       text: "recently",
-      icon: <FaStar />,
-      onClick: () => history.push("/recently"),
-    },
-    {
-      text: "This Week",
       icon: <FaFireAlt />,
-      onClick: () => history.push("/This Week"),
     },
     {
-      text: "Next Week",
-      icon: <BsFillSkipForwardFill />,
-      onClick: () => history.push("/Next Week"),
+      text: "top",
+      icon: <FaStar />,
+    },
+    {
+      text: "category",
+      icon: <FaCertificate  />,
     },
   ];
   const Platforms = [
     {
       text: "PC",
       icon: <FaWindows />,
-      onClick: () => history.push("/pc"),
     },
     {
-      text: "Playstation 4",
+      text: "Playstation",
       icon: <FaPlaystation />,
-      onClick: () => history.push("/playStation"),
     },
     {
       text: "Mobile",
-      icon: <FaXbox />,
-      onClick: () => history.push("/Mobile"),
-    },
-  ];
-  const Genres = [
-    {
-      text: "Action",
-      icon: ActionIcon,
-      onClick: () => history.push("/Action-games"),
-    },
-    {
-      text: "Shooter",
-      icon: ShooterIcon,
-      onClick: () => history.push("/Shooter-games"),
-    },
-    {
-      text: "Strategy",
-      icon: StrategyIcon,
-      onClick: () => history.push("/Strategy-games"),
-    },
-    {
-      text: "Adventure",
-      icon: AdventureIcon,
-      onClick: () => history.push("/Adventure-games"),
-    },
-    {
-      text: "Racing",
-      icon: RacingIcon,
-      onClick: () => history.push("/Racing-games"),
-    },
-    {
-      text: "Fighting",
-      icon: FightingIcon,
-      onClick: () => history.push("/Fighting-games"),
+      icon: <FaMobile />,
     },
   ];
   const itemsList = [
     {
-      text: "Home",
-      icon: <InboxIcon />,
-      onClick: () => history.push("./"),
-    },
-    {
       text: "About",
-      icon: <MailIcon />,
-      onClick: () => history.push("/"),
+      icon: <FaRegObjectGroup />,
     },
+    
     {
-      text: "Contact",
+      text: "Support",
       icon: <MailIcon />,
-      onClick: () => history.push("/"),
     },
   ];
   return (
@@ -155,31 +117,15 @@ const Releases = [
     >
       <Toolbar />
       <Toolbar />
-      {/* <List>
-        {itemsList.map((item, index) => {
-          const { text, icon, onClick } = item;
-          return (
-        <Link to={text}><ListItem button key={text} onClick={onClick} className="ListItem" Link to="">
-              {icon && (
-                <ListItemIcon className={classes.ListItemIcon}>
-                  <div className="iconHolder">{icon}</div>
-                </ListItemIcon>
-              )}
-              <ListItemText primary={text} />
-            </ListItem>
-            </Link>
-          );
-        })}
-      </List> */}
-      <Toolbar className={classes.toolbar}>
-        <h2>New Releases</h2>
-      </Toolbar>
+    
+      {/* <Toolbar className={classes.toolbar}>
+      </Toolbar> */}
       <Divider />
       <List>
         {Releases.map((item, index) => {
           const { text, icon, onClick } = item;
           return (
-           <Link to={`./${text}`} style={{color:'#FFBE33',textDecoration:'none'}}> <ListItem button key={text}  className="ListItem">
+           <a href={`./${text}`} style={{color:'#fff',textDecoration:'none'}}> <ListItem button  key={text}  className="ListItem">
               {icon && (
                 <ListItemIcon className={classes.ListItemIcon}>
                   <div className="iconHolder">{icon}</div>
@@ -187,10 +133,26 @@ const Releases = [
               )}
               <ListItemText primary={text} />
             </ListItem>
-            </Link>
+            </a>
           );
         })}
       </List>
+      {/* <List>
+        {itemsList.map((item, index) => {
+          const { text, icon, } = item;
+          return (
+        <a to={text}><ListItem button key={text} onClick={onClick} className="ListItem" Link to="">
+              {icon && (
+                <ListItemIcon className={classes.ListItemIcon}>
+                  <div className="iconHolder">{icon}</div>
+                </ListItemIcon>
+              )}
+              <ListItemText primary={text} />
+            </ListItem>
+            </a>
+          );
+        })}
+      </List> */}
       <Toolbar className={classes.toolbar}>
         <h2>Platforms</h2>
       </Toolbar>
@@ -199,7 +161,7 @@ const Releases = [
         {Platforms.map((item, index) => {
           const { text, icon, onClick } = item;
           return (
-            <ListItem button key={text}className="ListItem">
+           <a href={`./${text}`} style={{color:'#fff',textDecoration:'none'}}> <ListItem button  key={text}  className="ListItem">
               {icon && (
                 <ListItemIcon className={classes.ListItemIcon}>
                   <div className="iconHolder">{icon}</div>
@@ -207,29 +169,32 @@ const Releases = [
               )}
               <ListItemText primary={text} />
             </ListItem>
+            </a>
           );
         })}
       </List>
-      <Divider />
-      <Toolbar className={classes.toolbar}><h2>Genres</h2></Toolbar>
+      <Toolbar className={classes.toolbar}>
+        <h2>_____________</h2>
+      </Toolbar>
       <Divider />
       <List>
-        {Genres.map((item, index) => {
+        {itemsList.map((item, index) => {
           const { text, icon, onClick } = item;
           return (
-            <ListItem button key={text} onClick={onClick} className="ListItem">
+           <a href={`./${text}`} style={{color:'#fff',textDecoration:'none'}}> <ListItem button  key={text}  className="ListItem">
               {icon && (
                 <ListItemIcon className={classes.ListItemIcon}>
-                  <div className="iconHolder">
-                    <img src={icon} alt="" />
-                  </div>
+                  <div className="iconHolder">{icon}</div>
                 </ListItemIcon>
               )}
               <ListItemText primary={text} />
             </ListItem>
+            </a>
           );
         })}
       </List>
+     <Interested></Interested>
+      <Divider />
     </MUIDrawer>
   );
 };
@@ -238,34 +203,22 @@ export default Sidebar;
 // import Button from 'react-bootstrap/Button';
 // import ButtonGroup from 'react-bootstrap/ButtonGroup';
 // import Dropdown from 'react-bootstrap/Dropdown';
-
 // class Sidebar extends React.Component {
-
 //     render() {
 //         return (
 //             <>
-
 //                 <div style={{
 //                     width: "20%", left: "0", top: "0",
 //                     height: "100%", width: "200px",
 //                     backgroundColor: "black", position: "fixed", overflow: "auto",
-
-
 //                 }}>
 //                     <div style={{marginTop:"100px"}}></div>
 //                     <ButtonGroup vertical>
-                    
-      
 //         <Button href="./explore">explore</Button>
-        
-      
 //     </ButtonGroup>
 //                 </div>
 //             </>
 //         );
 //     }
 // }
-
 // export default Sidebar;
-
-

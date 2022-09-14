@@ -39,8 +39,8 @@ text-align: center;
 }
 .cardbody{
     height: 160px;
-    background-color: #212529 !important;
-    color : #FFC107 !important; 
+    /* background-color: #212529 !important;
+    color : #FFC107 !important;  */
 }
 .metacriticStyle{
     background-color: #212529 !important;
@@ -120,4 +120,31 @@ text-align: center;
   }
   a{
     cursor: pointer;
+  }
+  .most-popular {
+    margin-top: 60px;
+    padding: 30px;
+   background-color: #1F2122;
+    border-radius: 23px;
+    color: #27292A;
+    margin-right: 183px;
+  }
+   .item {
+    background-color: #27292A;
+    padding: 30px 15px;
+    border-radius: 23px;
+    margin-bottom: 30px;
+   }
+   .heading-section h4 {
+    color: #E69C00;
+    font-size: 34px;
+    text-decoration: none;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    font-family: 'Poppins', sans-serif;
+   }
+   .heading-section h4 em {
+    color: #fff;
+    font-style: normal;
+    text-decoration: underline;
   }

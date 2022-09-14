@@ -60,44 +60,56 @@ class Explore extends React.Component {
 
   render() {
     return (
-      <CardGroup style={{ marginTop:"auto"}} >
+   
 
+      
+   
+      <>
+      <div style={{marginTop:"100px"}}>
+        <div style={{ marginLeft: "20%", padding:"0" }}>
+      <div class="most-popular">
+      <div class="heading-section">
+      <h4>Explore</h4>
+    </div>
+      <CardGroup  >
         {this.state.games.map((item) => {
           return (
-            <div>
-              <Card style={{ width: "18rem" }} className="alaa2">
+                     <div class="item">
+              <Card style={{ width: "18rem" ,"background-color":"#CDC2AE" }} className="item">
                 <Card.Img
                   variant="top"
                   src={item.image}
                   alt ="img"
                   className="size"
                 />
-                <Card.Body className="cardbody">
+                <Card.Body className="cardbody" style={{color:'black'}}>
                   <Card.Title>{item.name}</Card.Title>
                   <Card.Text>
                   Genres:  {item.genres.join(" - ")}
                   </Card.Text>
                 </Card.Body>
-                <ListGroup className="list-group-flush">
-                    <ListGroup.Item className="listplatforms">
+                 <ListGroup className="list-group-flush">
+                    {/* <ListGroup.Item className="listplatforms">
                         {item.parent_platforms.map((element) =>{
                             return (
                                 <div>
-                                   <h3 className="platforms">{element}</h3>
+                                   <span className="platforms">{element}</span>
                                 </div>
                             )
                         })}
-                 </ListGroup.Item>
-                 <ListGroup.Item> metacritic : {item.metacritic}</ListGroup.Item>
-                 <Button onClick={() => this.addGames(item)} variant="outline-danger">♥</Button>{' '}
-
+                 </ListGroup.Item> */}
+                 <ListGroup.Item  style={{"background-color":"#CDC2AE"}}> metacritic : {item.metacritic}</ListGroup.Item>
+                    <Button onClick={() => this.addGames(item)} variant="outline-secondary">Add to my list</Button>{' '}
                 </ListGroup>
-             
               </Card>
-            </div>
+              </div>
           );
         })}
       </CardGroup>
+      </div>
+      </div>
+      </div>
+      </>
     );
   }
 }
