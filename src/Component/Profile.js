@@ -42,9 +42,12 @@ class Profile extends React.Component {
 
   }
   render() {
+    
     const {user , isAuthenticated } = this.props.auth0;
     return (
       isAuthenticated && (
+        <div style={{marginTop:"100px"}}>
+        <div style={{ marginLeft: "20%", padding:"0" }}>
           <div style={{  display: "flex",
           justifyContent:" space-around",
           margin: "50px 0px",overflow :"hidden "}}>
@@ -66,6 +69,8 @@ class Profile extends React.Component {
         </Card>
        
         <MyList></MyList>
+        </div>
+        </div>
         </div>
             )
     );

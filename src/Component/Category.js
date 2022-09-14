@@ -65,8 +65,16 @@ class Category extends React.Component {
 
   render() {
     return (
+      <>
+      <div style={{marginTop:"100px",}}>
+        <div style={{ marginLeft: "20%", padding:"0" }}>
+      <div class="most-popular">
+      <div class="heading-section">
+      <h4> Serach by Category</h4>
+    </div>
+      <CardGroup >
       <div>
-        <Form.Select
+        <Form.Select style={{padding:"auto"}}
           id="genres"
           aria-label="Category"
           onChange={this.categorySelect}
@@ -88,41 +96,45 @@ class Category extends React.Component {
             {" "}
             {this.state.games.map((item) => {
               return (
-                <div>
-                  <Card style={{ width: "18rem" }} className="alaa2">
-                    <Card.Img variant="top" src={item.image} alt="img"  className="size" />
-                    <Card.Body className="cardbody" >
-                      <Card.Title>{item.name}</Card.Title>
-                      <Card.Text>Genres: {item.genres.join(" - ")}</Card.Text>
-                    </Card.Body>
-                    <ListGroup className="list-group-flush">
-                      <ListGroup.Item className="listplatforms">
-                        {item.parent_platforms.map((element) => {
-                          return (
-                            <div>
-                              <h3 className="platforms">{element}</h3>
-                            </div>
-                          );
-                        })}
-                      </ListGroup.Item>
-                      <ListGroup.Item>
-                        {" "}
-                        metacritic : {item.metacritic}
-                      </ListGroup.Item>
-                      <Button
-                        onClick={() => this.addGames(item)}
-                        variant="outline-danger"
-                      >
-                        ♥
-                      </Button>{" "}
-                    </ListGroup>
-                  </Card>
+                <div class="item">
+                <Card style={{ width: "18rem" ,"background-color":"#CDC2AE" }} className="item">
+                  <Card.Img
+                    variant="top"
+                    src={item.image}
+                    alt ="img"
+                    className="size"
+                  />
+                  <Card.Body className="cardbody" style={{color:'black'}}>
+                    <Card.Title>{item.name}</Card.Title>
+                    <Card.Text>
+                    Genres:  {item.genres.join(" - ")}
+                    </Card.Text>
+                  </Card.Body>
+                   <ListGroup className="list-group-flush">
+                      {/* <ListGroup.Item className="listplatforms">
+                          {item.parent_platforms.map((element) =>{
+                              return (
+                                  <div>
+                                     <span className="platforms">{element}</span>
+                                  </div>
+                              )
+                          })}
+                   </ListGroup.Item> */}
+                   <ListGroup.Item  style={{"background-color":"#CDC2AE"}}> metacritic : {item.metacritic}</ListGroup.Item>
+                      <Button onClick={() => this.addGames(item)} variant="outline-secondary">Add to my list</Button>{' '}
+                  </ListGroup>
+                </Card>
                 </div>
               );
             })}
           </CardGroup>
         )}
       </div>
+      </CardGroup>
+      </div>
+      </div>
+      </div>
+      </>
     );
   }
 }

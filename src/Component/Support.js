@@ -23,7 +23,7 @@ const Support = () => {
           e.target.reset();
       };
     return (
-        <>
+        <div style={{marginTop:"100px"}}>
         <Form ref={form} onSubmit={sendEmail}>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label className='fontLabel'>User name </Form.Label>
@@ -46,7 +46,7 @@ const Support = () => {
       <a href="https://www.instagram.com/proplayers99s/" target='_blank' el='noreferrer noopener' className="instagramSocial" rel='noreferrer'>
         <FontAwesomeIcon icon={faInstagram} size="4x" color='black' />
       </a>
-      </>
+      </div>
     );
 }
 export default Support;
