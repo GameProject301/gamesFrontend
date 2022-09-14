@@ -60,7 +60,7 @@ class PlayStation extends React.Component {
 
   render() {
     return (
-      <div style={{ marginLeft: "20%", padding:"0" }}>
+      <div style={{ marginLeft: "20%", padding:"0", marginTop:"100px" }}>
 
       <CardGroup>
 

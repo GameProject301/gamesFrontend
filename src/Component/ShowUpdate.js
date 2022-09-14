@@ -2,7 +2,7 @@ import React from "react";
 import { withAuth0 } from "@auth0/auth0-react";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-
+import supp from "./supp.css";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -16,11 +16,11 @@ class ShowUpdate extends React.Component {
           <Modal.Header closeButton>
             <Modal.Title>Update</Modal.Title>
           </Modal.Header>
-           <Form onSubmit={this.props.handleUpdate}>
+           <Form className="upStyle" onSubmit={this.props.handleUpdate}>
           <Modal.Body>
            
               <Container>
-                <Row>
+                <Row className="up-f">
                   <Col xs={6} md={4}>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                       <Form.Check
@@ -52,7 +52,7 @@ class ShowUpdate extends React.Component {
                     </Form.Group>
                   </Col>
                 </Row>
-                <Row>
+                <Row className="up-f">
                   <Col xs={6} md={4}>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                       <Form.Check
@@ -84,7 +84,7 @@ class ShowUpdate extends React.Component {
                     </Form.Group>
                   </Col>
                 </Row>
-                <Row>
+                <Row className="up-f">
                   <Col xs={6} md={4}>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                       <Form.Check

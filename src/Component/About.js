@@ -5,6 +5,13 @@ import Card from 'react-bootstrap/Card';
 class About extends React.Component{
     render(){
   return (
+    <div style={{ marginTop:"100px" }}>
+      <h1 style={{color:"white",fontSize:"x-large" }}>Our project is Gaming web Application that render all games to the user by search to them and allowed to user make some operations such that:
+
+Add game to favorite list.
+Update information of game.
+Delete game from list.
+Get game information from API.</h1>
     <div className='us'>
     <Card className="person1" style={{ width: '18rem' } }>
       <Card.Img variant="top" src="https://avatars.GitHubusercontent.com/u/109727654?v=4" />
@@ -63,6 +70,7 @@ class About extends React.Component{
         
       </Card.Body>
     </Card>
+    </div>
     </div>
   );
     }

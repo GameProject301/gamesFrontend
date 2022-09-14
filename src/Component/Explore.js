@@ -60,7 +60,7 @@ class Explore extends React.Component {
 
   render() {
     return (
-      <CardGroup >
+      <CardGroup style={{ marginTop:"auto"}} >
 
         {this.state.games.map((item) => {
           return (

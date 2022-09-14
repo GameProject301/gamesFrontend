@@ -90,7 +90,7 @@ class App extends React.Component {
             </Route>
             <Route
               exact path="/playstation"
-              element={isAuthenticated && <><PlayStation />
+              element={isAuthenticated &&  <> <Sidebar /> <PlayStation />
               <Generate />
               </>}
             >
