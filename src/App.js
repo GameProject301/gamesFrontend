@@ -39,8 +39,8 @@ class App extends React.Component {
 
             <Route
               exact path="/Profile"
-              element={isAuthenticated &&
-              <Profile />
+              element={isAuthenticated && <>   <Sidebar />
+              <Profile /> </>
               }
             >
             </Route>
@@ -55,7 +55,7 @@ class App extends React.Component {
 
               </Route>
             <Route 
-              exact path="/main"
+              exact path="/home"
               element={isAuthenticated && <><CarouselRecommanded />
                <Main />
                <Platforms />
@@ -99,7 +99,8 @@ class App extends React.Component {
               exact path="/explore"
               element={
               <> 
-              <CarouselRecommanded />
+              <Sidebar />
+              {/* <CarouselRecommanded /> */}
               <Explore />
              
             </>
@@ -109,7 +110,7 @@ class App extends React.Component {
 
             <Route
               exact path="/recently"
-              element={isAuthenticated &&<><CarouselRecommanded /> <Recently /></>}
+              element={isAuthenticated &&<> <Sidebar /> <TopSlider /> <Recently /></>}
 
             >
             </Route>
@@ -125,6 +126,7 @@ class App extends React.Component {
               exact path="/category"
               element={isAuthenticated && 
               <>
+              <Sidebar />
             <TopSlider/>
               <Category />
               </>}
@@ -147,11 +149,7 @@ class App extends React.Component {
             element={<About />}
             >
           </Route>
-          <Route
-            exact path="/interested"
-            element={<Interested />}
-            >
-          </Route>
+        
         
         </Routes>
 

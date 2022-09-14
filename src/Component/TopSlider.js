@@ -26,7 +26,7 @@ class TopSlider extends React.Component {
     render() {
         return (
 
-                <div style={{width:"400px"}}>
+                <div style={{marginLeft:"20%", width:"80%px", marginRight:"183px", marginTop:"80px"}}>
             <Carousel fade>
             {
                 this.state.games.map((item) => {

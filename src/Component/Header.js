@@ -20,8 +20,8 @@ class Header extends React.Component {
 
             <>
 
-                <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top"
-                    style={{ padding: "15px"}} >
+                <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top" 
+                    style={{ padding: "15px" , zIndex:"151515151515"}} >
                     <Container>
                         <Navbar.Brand href="#home">
                             <img

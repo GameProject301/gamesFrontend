@@ -31,13 +31,13 @@ class Footer extends React.Component {
                 rippleColor='light'
                 className='bg-image hover-overlay shadow-1-strong rounded'
               >
-                <a href='https://www.twitch.tv/' target="_blank">
+                {/* <a href='https://www.twitch.tv/' target="_blank">
                 <img src='https://images.squarespace-cdn.com/content/v1/5283751ae4b0dbca22e947d8/1456304684381-YYLDMCPJEK72MWEJSUAY/image-asset.jpeg' className='foot_img' />
                   <div
                     className='mask'
                     style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}
                   ></div>
-                </a>
+                </a> */}
               </MDBRipple>
           
             
@@ -87,13 +87,13 @@ class Footer extends React.Component {
                 rippleColor='light'
                 className='bg-image hover-overlay shadow-1-strong rounded'
               >
-                <a href='https://betway.com/en-jo/' target="_blank">
+                {/* <a href='https://betway.com/en-jo/' target="_blank">
                 <img src='https://upload.wikimedia.org/wikipedia/commons/9/95/Betway_logo.jpg' className='foot_img' />
                   <div
                     className='mask'
                     style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}
                   ></div>
-                </a>
+                </a> */}
               </MDBRipple>
             
           </div>
