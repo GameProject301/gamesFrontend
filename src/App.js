@@ -22,11 +22,16 @@ import Generate from './Component/Generate';
 import Support from './Component/Support';
 import CarouselRecommanded from './Component/assets/CarouselRecommanded';
 import About from './Component/About';
+
+import { Slider } from '@material-ui/core';
+
+
 import Interested from './Component/Interested';
 import TopSlider from "./Component/TopSlider";
 import Sidebar from "./Component/Sidebar";
+
 class App extends React.Component {
-// 
+
   render() {
     const { isAuthenticated } = this.props.auth0;
 
@@ -34,23 +39,33 @@ class App extends React.Component {
       <>
         <Router>
           <Header />
+        
+          <CarouselRecommanded /> 
+  
+
+
+
           <Routes>
 
 
             <Route
               exact path="/Profile"
+
               element={isAuthenticated &&
               <Profile />
               }
+
             >
             </Route>
 
              <Route
               exact path="/"
               element={
+
               <><CarouselRecommanded />
               <Platforms />
               </>}
+
             >
 
               </Route>
@@ -63,25 +78,28 @@ class App extends React.Component {
 >
             </Route> 
             
-            <Route
+         <Route
               exact path="/pc"
 
               element={isAuthenticated &&
-                <>   
+    <>   
                 <Sidebar />
                                   <PC />
+
                   <Generate />
                 </>
               }
             >
-            </Route>
+            </Route> 
 
             <Route
 
               exact path="/mobile"
               element={isAuthenticated &&
+
                 <>   <Sidebar />
                 
+
                   <Mobile />
                   <Generate />
                 </>
@@ -154,9 +172,10 @@ class App extends React.Component {
           </Route>
         
         </Routes>
-
+       
         <Footer />
       </Router>
+      
 </>
     )
   }

@@ -3,6 +3,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #0c0c0c;
+  
+  
   /* background-image: url("https://images.unsplash.com/photo-1608690158878-1a96b29b455b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NTN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"); */
   overflow-x: hidden;
 
@@ -11,16 +13,18 @@ body {
   background-color: #212529 !important;
 
 
+
 }
 *{
   margin: 0;
   padding: 0;
 }
+
 .alaa{
   color: red;
 }
  h4{
-  background-color: #F2D388;
+  /* background-color: #F2D388; */
   text-align: center;
   font-family: 'Combo', cursive;
   font-size: 0.5rem;
@@ -428,6 +432,7 @@ color: #e69c00;
   background-color: #ffffff;
   width: 12px;
   height: 12px;
+
   border-radius: 100%;
   opacity: 1;
 }

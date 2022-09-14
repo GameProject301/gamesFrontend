@@ -1,5 +1,7 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Combo&family=Roboto+Condensed:ital,wght@1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
+
+
 
 .card { background-color: rgba(245, 245, 245, 0.4); }
 
@@ -9,9 +11,20 @@ h1{
   font-family: 'Roboto Condensed', sans-serif;
 text-align: center;
 }
+/* .card{
+
+margin-right: 19%;
+
+} */
+/* .cardGroup{
+  display: block;
+  margin-left: 23%;
+ margin-top: 5%;
+
+} */
 .loadmore{
     position: absolute;
-    margin-top:135%;
+    margin-top:250%;
    margin-left: 10%;
 }
 .loadLess{
@@ -22,25 +35,35 @@ text-align: center;
 }
 .size{
     width: 285px;
-    height: 160px;
-    background-color:#212529 !important ;
+
+    height: 160px; 
+
+   
+
+   /* height: 160px;
+    background-color:#212529 !important ;*/
+
 }
 .size2{
     width: 285px;
     height: 280px;
 }
 .platforms{
-    font-size: 0.9rem;
+  font-weight: bolder;
+    font-size: 0.5rem;
+    background-color: #27292a; 
+  
 }
 .listplatforms{
-  height: 160px;
-  background-color: #212529 !important ;
-  color : #FFC107 !important;  
+ alaa-adoos
+  
+  
+  height: 100px;
+  
 }
 .cardbody{
-    height: 160px;
-    background-color: #212529 !important;
-    color : #FFC107 !important; 
+    height: 100px;
+
 }
 .metacriticStyle{
     background-color: #212529 !important;
@@ -53,7 +76,8 @@ text-align: center;
 .shop {
     position: relative;
     overflow: hidden;
-    margin: 15px 0px;
+    margin: 15px 0px; 
+
   }
   
   .shop:before {
@@ -115,9 +139,161 @@ text-align: center;
   }
   
   .shop .shop-body .cta-btn {
-    color: #D61C4E;
+    color: #e69c00;
     text-transform: uppercase;
   }
   a{
     cursor: pointer;
+
   }
+
+.container{
+display: block;
+
+}
+
+
+.most-popular {
+  margin-top: 60px;
+  padding: 30px;
+ background-color: #1f2122;
+  border-radius: 23px;
+  color: #27292a; 
+}
+
+ .item {
+  background-color: #27292a; 
+ 
+  padding: 30px 15px;
+  border-radius: 23px;
+  margin-bottom: 30px;
+ }
+ .heading-section h4 {
+  color: #e69c00;
+  font-size: 34px;
+  text-decoration: none;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+ 
+ }
+ .heading-section h4 em {
+  color: #fff;
+  font-style: normal;
+  text-decoration: underline;
+}
+.team-item .team-img::before,
+.team-item .team-img::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(1, 10, 53, .8);
+    transition: .5s;
+}
+
+.team-item .team-img::after {
+    left: auto;
+    right: 0;
+}
+
+.team-item:hover .team-img::before,
+.team-item:hover .team-img::after {
+    width: 50%;
+}
+
+.team-item .team-img .team-social {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    z-index: 3;
+    opacity: 0;
+}
+
+.team-item:hover .team-img .team-social {
+    transition-delay: .3s;
+    opacity: 1;
+}
+
+
+/*** Testimonial ***/
+.animated.pulse {
+    animation-duration: 1.5s;
+}
+
+.testimonial-left,
+.testimonial-right {
+    position: relative;
+}
+
+.testimonial-left img,
+.testimonial-right img {
+    position: absolute;
+    border-radius: 70px;
+}
+
+.testimonial-left img:nth-child(1),
+.testimonial-right img:nth-child(3) {
+    width: 70px;
+    height: 70px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.testimonial-left img:nth-child(2),
+.testimonial-right img:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.testimonial-left img:nth-child(3),
+.testimonial-right img:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    bottom: 10%;
+    right: 10%;
+}
+
+.testimonial-carousel .owl-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+.testimonial-carousel .owl-nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next {
+    margin: 0 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: var(--primary);
+    border-radius: 45px;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+    background: var(--secondary);
+}
+

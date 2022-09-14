@@ -6,7 +6,12 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import './alaa.css';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+
+import Form from 'react-bootstrap/Form';
+
+
 import Swal from 'sweetalert2';
+
 class PC extends React.Component {
   constructor(props) {
     super(props);
@@ -72,16 +77,32 @@ class PC extends React.Component {
 
   render() {
     return (
+
+      // <Row xs={1} md={4} className="g-4">
+      <>
+      
+
+      <div class="most-popular">
+      <div class="heading-section">
+      <h4> <em>best Collection of</em> PC games</h4>
+    </div>
+      <CardGroup  > 
+ 
+  
+ 
+           
+
       <div style={{marginTop:"100px"}}>
         <div style={{ marginLeft: "20%", padding:"0" }}>
 
         <CardGroup>
+
         {this.state.games.map((item) => {
 
           return (
-            <div>
-                   
-              <Card style={{ width: "18rem" }}>
+           
+                     <div class="item">
+              <Card style={{ width: "18rem" ,"background-color":"#CDC2AE" }} className="item">
             
                 <Card.Img
                   variant="top"
@@ -89,37 +110,47 @@ class PC extends React.Component {
                   alt ="img"
                   className="size"
                 />
-                <Card.Body className="cardbody">
+                <Card.Body className="cardbody" style={{color:'black'}}>
                   <Card.Title>{item.name}</Card.Title>
                   <Card.Text>
                   Genres:  {item.genres.join(" - ")}
                   </Card.Text>
                 </Card.Body>
-                <ListGroup className="list-group-flush">
-                    <ListGroup.Item className="listplatforms">
+                 <ListGroup className="list-group-flush">
+                    {/* <ListGroup.Item className="listplatforms">
                         {item.parent_platforms.map((element) =>{
                             return (
                                 <div>
-                                   <h3 className="platforms">{element}</h3>
+                                   <span className="platforms">{element}</span>
                                 </div>
                             )
-                        })}
-                 </ListGroup.Item>
-                 <ListGroup.Item> metacritic : {item.metacritic}</ListGroup.Item>
-                    <Button onClick={() => this.addGames(item)} variant="outline-danger">♥</Button>{' '}
+                        })} 
+                 </ListGroup.Item> */}
+                 <ListGroup.Item  style={{"background-color":"#CDC2AE"}}> metacritic : {item.metacritic}</ListGroup.Item>
+                    <Button onClick={() => this.addGames(item)} variant="outline-secondary">♥</Button>{' '}
                  
                 </ListGroup>
                 
               </Card>
-            
-            </div>
+              </div>
+              
+             
           );
         })}
+    
+      
+      
+     
       </CardGroup>
+
+      </div>
+     
+
 
           </div>
 
         </div>
+ </>
     );
   }
 }
