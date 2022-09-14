@@ -6,7 +6,7 @@ import LoginButton from "./LoginButton";
 import LogoutButton from "./LogoutButton";
 import Welcome from "./Welcome";
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import './alaa.css';
 import { withAuth0 } from '@auth0/auth0-react';
 
 
@@ -18,7 +18,7 @@ class Header extends React.Component {
         return (
 
 
-            <>
+            <div className="top-nav-bar">
 
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top"
                     style={{ padding: "15px" }} >
@@ -66,7 +66,7 @@ class Header extends React.Component {
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
-            </>
+            </div>
 
         )
     }

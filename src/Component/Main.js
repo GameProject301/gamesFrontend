@@ -20,6 +20,7 @@ render(){
       <>
       
 <CarouselRecommanded />
+
       <Category/>
       
       {/* <Platforms/> */}

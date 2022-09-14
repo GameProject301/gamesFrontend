@@ -22,6 +22,12 @@ import Generate from './Component/Generate';
 import Support from './Component/Support';
 import CarouselRecommanded from './Component/assets/CarouselRecommanded';
 import About from './Component/About';
+import Sidebar from './Component/Sidebar';
+import Sidebar2 from './Component/Sidebar2';
+import AlaaSide from './Component/AlaaSide';
+
+import { Slider } from '@material-ui/core';
+
 class App extends React.Component {
 
   render() {
@@ -31,20 +37,37 @@ class App extends React.Component {
       <>
         <Router>
           <Header />
-<CarouselRecommanded />
+        
+          <CarouselRecommanded /> 
+          <Sidebar2/>
+
           <Routes>
 
 
             <Route
               exact path="/Profile"
-              element={isAuthenticated && <Profile />}
+              element={isAuthenticated && 
+              
+              <>
+              
+              <Profile />
+            
+            </>
+            }
             >
             </Route>
 
              <Route
 
               exact path="/"
-              element={<Platforms />}
+              element={
+              <>
+            
+
+              <Platforms />
+            
+              </>
+            }
             >
 
               </Route>
@@ -54,24 +77,26 @@ class App extends React.Component {
 >
             </Route> 
             
-            <Route
+         <Route
               exact path="/pc"
 
               element={isAuthenticated &&
                 <>
+                
                   <PC />
-
+                 
                   <Generate />
                 </>
               }
             >
-            </Route>
+            </Route> 
 
             <Route
 
               exact path="/mobile"
               element={isAuthenticated &&
                 <>
+                    
                   <Mobile />
                   <Generate />
                 </>
@@ -121,9 +146,10 @@ class App extends React.Component {
             >
           </Route>
         </Routes>
-
+       
         <Footer />
       </Router>
+      
 </>
     )
   }

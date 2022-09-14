@@ -47,6 +47,9 @@ this.setState({
         const { isAuthenticated} = this.props.auth0;
         return(
             <>
+            <div class="heading-section">
+      <h4> <em>best Collection of</em> PC games</h4>
+    </div>
 {/* <ul className="platfomrslist">
     <li><a href="./pc">pc 🖥️</a></li>
     <li><a href="./Mobile">Mobile 📱</a></li>

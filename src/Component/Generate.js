@@ -4,7 +4,9 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import './alaa.css';
+import Row from 'react-bootstrap/Row';
 import CardGroup from 'react-bootstrap/CardGroup';
+
 class Generate extends React.Component{
 
     constructor(props) {
@@ -74,7 +76,7 @@ axios
 <>
 
 
-<Button className={this.state.className}onClick={this.generateMore}>loadmore</Button>
+<Button variant="primary" className={this.state.className}onClick={this.generateMore} style={{marginLeft:"500px"}}>loadmore</Button>
 
 {
 this.state.show &&
@@ -84,8 +86,8 @@ this.state.show &&
 
 
 
-{/* <Row xs={1} md={4} className="g-4"> */}
-<CardGroup >
+
+ <CardGroup   className="cardGroup">
         {this.state.games.map((item) => {
           return (
             <div>

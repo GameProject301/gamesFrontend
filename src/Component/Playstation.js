@@ -60,26 +60,31 @@ class PlayStation extends React.Component {
 
   render() {
     return (
+      <>
+       <div class="most-popular">
+      <div class="heading-section">
+      <h4> <em>best Collection of</em> PS games</h4>
+    </div>
       <CardGroup>
 
         {this.state.games.map((item) => {
           return (
-            <div>
-              <Card style={{ width: "18rem" }}>
+            <div class="item">
+              <Card style={{  width: "18rem" ,"background-color":"#CDC2AE" }} className="item">
                 <Card.Img
                   variant="top"
                   src={item.image}
                   alt ="img"
                   className="size"
                 />
-                <Card.Body className="cardbody">
+                <Card.Body className="cardbody" style={{color:'white'}}>
                   <Card.Title>{item.name}</Card.Title>
                   <Card.Text>
                   Genres:  {item.genres.join(" - ")}
                   </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                    <ListGroup.Item className="listplatforms">
+                    {/* <ListGroup.Item className="listplatforms">
                         {item.parent_platforms.map((element) =>{
                             return (
                                 <div>
@@ -87,9 +92,9 @@ class PlayStation extends React.Component {
                                 </div>
                             )
                         })}
-                 </ListGroup.Item>
-                 <ListGroup.Item> metacritic : {item.metacritic}</ListGroup.Item>
-                 <Button onClick={() => this.addGames(item)} variant="outline-danger">♥</Button>{' '}
+                 </ListGroup.Item> */}
+                 <ListGroup.Item style={{"background-color":"#CDC2AE"}}> metacritic : {item.metacritic}</ListGroup.Item>
+                 <Button onClick={() => this.addGames(item)} variant="outline-secondary">♥</Button>{' '}
 
                 </ListGroup>
                 
@@ -98,6 +103,9 @@ class PlayStation extends React.Component {
           );
         })}
       </CardGroup>
+
+      </div>
+      </>
     );
   }
 }
