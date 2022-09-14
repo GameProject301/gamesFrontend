@@ -1,35 +1,27 @@
 import React from "react";
 import '../App.css';
-
-import Platforms from "./Platforms";
 import Category from "./Category";
-
 import CarouselRecommanded from './assets/CarouselRecommanded'
+import Sidebar from "./Sidebar";
+
+
+class Main extends React.Component {
 
 
 
-class Main extends React.Component{
-   
-    
+  render() {
 
-render(){
+
 
 
 
     return (
-      <>
-      
-<CarouselRecommanded />
+<>
+            <Category />
 
-      <Category/>
-      
-      {/* <Platforms/> */}
-      </>
-
-  
-
-    )
+</>
+        )
 }
 
 }
-export default Main ;
+        export default Main ;

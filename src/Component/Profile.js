@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import MyList from "./myList"
 import { withAuth0 } from '@auth0/auth0-react';
-
+import GetINterested from "./GetInterested";
 class Profile extends React.Component {
   constructor(props) {
     super(props);
@@ -47,7 +47,7 @@ class Profile extends React.Component {
       isAuthenticated && (
           <div style={{  display: "flex",
           justifyContent:" space-around",
-          margin: "50px 0px"}}>
+          margin: "50px 0px",overflow :"hidden "}}>
           <Card style={{ width: '18rem' , backgroundColor:"#212529" , color:"white"}}   >
           <Card.Img variant="top" src={user.picture} alt={user.name} />
           <Card.Body>
@@ -58,11 +58,13 @@ class Profile extends React.Component {
           </Card.Body>
           <ListGroup className="list-group-flush" >
             <ListGroup.Item style={{ backgroundColor:"#212529" , color:"white"}}>{user.email?user.email:'no email found'} </ListGroup.Item>
-            <ListGroup.Item style={{ backgroundColor:"#212529" , color:"white"}}>{user.sub}</ListGroup.Item>
             <ListGroup.Item style={{ backgroundColor:"#212529" , color:"white"}}>{user.updated_at}</ListGroup.Item>
+          
           </ListGroup>
+          <ListGroup.Item style={{ backgroundColor:"#212529" , color:"white" }}>  <GetINterested></GetINterested></ListGroup.Item>
+
         </Card>
-        
+       
         <MyList></MyList>
         </div>
             )

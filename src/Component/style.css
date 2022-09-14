@@ -7,9 +7,14 @@
     justify-content: center;
 }
 .copyright_text {
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
+    margin-left: 330px;
+    font-size: x-large;
+    
+}
+.footerPart{
+    background-color: #212529;
+    height:130px;
+    color: #FFC107;
 }
 .text-white {
     text-decoration: none !important;
@@ -20,10 +25,14 @@
 .icons_span {
     float: right;
     margin-right: 20px;
+    margin-top: 25px;
 }
 .sc_icon {
     margin-right:10px;
+    margin-top: 100px;
     text-decoration: none !important;
+    color: #141b22;
+    
 }
 .us{
     display: flex;
@@ -32,23 +41,34 @@
 }
 .person1 {
     margin-right: 20px;
-    border-radius: 10rem !important;
+    background-color:#C4B6B6;
+    margin: auto;
+    
 }
 .person2 {
     margin-right: 20px;
-    border-radius: 10rem !important;
+    background-color:#C4B6B6 ;
+    margin: auto;
+
+    
+   
 }
 .person3 {
     margin-right: 20px;
-    border-radius: 10rem !important;
+    background-color:#C4B6B6;
+    margin: auto;
+
+   
 }
 .person4 {
     margin-right: 20px;
-    border-radius: 10rem !important;
+    background-color:#C4B6B6 ;
+    margin: auto;
+
 }
 .person5 {
     margin-right: 20px;
-    border-radius: 9rem !important;
+    background-color:#C4B6B6 ;
+    margin: auto;
+
 }
-
-

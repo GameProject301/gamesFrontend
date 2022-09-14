@@ -60,12 +60,16 @@ class Explore extends React.Component {
 
   render() {
     return (
+
       <>
       <div class="most-popular">
       <div class="heading-section">
       <h4> <em>best Collection of</em> PC games</h4>
     </div>
       <CardGroup >
+
+
+
 
         {this.state.games.map((item) => {
           return (

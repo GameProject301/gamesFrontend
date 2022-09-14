@@ -61,11 +61,16 @@ class Mobile extends React.Component {
   render() {
     return (
 
+
       <>
       <div class="most-popular">
       <div class="heading-section">
       <h4> <em>best Collection of</em> PS games</h4>
     </div>
+
+      <div style={{ marginLeft: "20%", padding:"0", marginTop:"100px" }}>
+
+
       <CardGroup>
 
         {this.state.games.map((item) => {
@@ -104,8 +109,13 @@ class Mobile extends React.Component {
           );
         })}
       </CardGroup>
+
 </div>
-      </>
+     
+
+      </div>
+ </>
+
     );
   }
 }
