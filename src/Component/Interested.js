@@ -14,7 +14,7 @@ class Interested extends React.Component {
     super(props);
     this.state = {
       games: [],
-        showOne : true,
+        showOne : false,
       show: false,
     };
   }
@@ -141,9 +141,10 @@ class Interested extends React.Component {
           </Modal.Body>
          </Form>
         </Modal>
-        {this.state.showOne&&<Button onClick={this.handleShow} variant="outline-danger">
+        {!this.state.showOne&&<Button onClick={this.handleShow} variant="outline-danger">
           interested
         </Button>}
+        
       </div>
     );
   }
