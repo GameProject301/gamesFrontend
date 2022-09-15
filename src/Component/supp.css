@@ -1,77 +1,77 @@
 .facebookSocial {
-    border-radius: 5px;
-    padding: 50px;
-    margin: 20px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 50px;
+  margin: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 .instagramSocial {
-    border-radius: 5px;
-    padding: 50px;
-    margin: 20px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-     margin-top:135%;
+  border-radius: 5px;
+  padding: 50px;
+  margin: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+   margin-top:135%;
 }
-  .input-group {
-    width: 90% !important;
-    margin-bottom: 15px;
-    text-align: center;
-    display: 'flex';
-    alignItems: 'center';
-    justifyContent: 'center';
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .form-control {
-    width: 50% !important;
-    margin-bottom: 15px;
-    text-align: center;
-    display: 'flex';
-    alignItems: 'center';
-    justifyContent: 'center';
-    margin-left: 25%;
-    margin-right: 25%;
-  }
-  form {
-    font-size: 1rem;
-    forn-color: #000;
-    font-style: normal;
-    font-weight: 400;
-    padding: 1.5em;
-    margin: 0 auto;
-    max-width: 600px;
-    background: #212529;
-    border-radius: 0.5em;
-    margin: 0 auto;
-    display: 'center';
-    justifyContent: 'center';
-    margin-top: 2%;
-    margin-bottom: 2%;
+.input-group {
+  width: 90% !important;
+  margin-bottom: 15px;
+  text-align: center;
+  display: 'flex';
+  alignItems: 'center';
+  justifyContent: 'center';
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.form-control {
+  width: 50% !important;
+  margin-bottom: 15px;
+  text-align: center;
+  display: 'flex';
+  alignItems: 'center';
+  justifyContent: 'center';
+  margin-left: 25%;
+  margin-right: 25%;
+}
+form {
+  font-size: 1rem;
+  forn-color: #000;
+  font-style: normal;
+  font-weight: 400;
+  padding: 1.5em;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #212529;
+  border-radius: 0.5em;
+  margin: 0 auto;
+  display: 'center';
+  justifyContent: 'center';
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 .error-message {
-    margin-top: 1em;
-    color: rgb(80, 11, 65) !important;
+  margin-top: 1em;
+  color: rgb(80, 11, 65) !important;
 }
 .fontLabel{
-    font: optional;
-    color: white;
+  font: optional;
+  color: white;
 }
 .boxSupp{
-    background-color: white;
- 
-    color: #E0D9BB;
+  background-color: white;
+
+  color: #E0D9BB;
 }
 
 .upStyle{
-  background-color: white;
-  
+background-color: white;
+
 }
 .up-f{
-  background-color: #d0df9a;
-  margin: auto;
+background-color: #d0df9a;
+margin: auto;
 }
