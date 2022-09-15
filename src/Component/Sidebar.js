@@ -14,13 +14,7 @@ import {
 
 } from "@material-ui/core";
 import {
-  FaFireAlt,
-  FaPlaystation,
-  FaStar,
-  FaWindows,
-  FaMobile,
-  FaCertificate ,
-  FaRegObjectGroup,
+ 
   FaUmbrellaBeach,
 } from "react-icons/fa";
 import { BsFillSkipForwardFill } from "react-icons/bs";
@@ -61,7 +55,7 @@ const Sidebar = (props) => {
 const Releases = [
   {
     text: "Home",
-    icon: <InboxIcon />,
+    icon: <FaUmbrellaBeach />,
   },
   {
     text: "profile",
@@ -69,44 +63,44 @@ const Releases = [
   },
     {
       text: "explore",
-      icon: <BsFillSkipForwardFill  />,
+      icon: <FaUmbrellaBeach  />,
     },
     {
       text: "recently",
-      icon: <FaFireAlt />,
+      icon: <FaUmbrellaBeach />,
     },
     {
       text: "top",
-      icon: <FaStar />,
+      icon: <FaUmbrellaBeach />,
     },
     {
       text: "category",
-      icon: <FaCertificate  />,
+      icon: <FaUmbrellaBeach  />,
     },
   ];
   const Platforms = [
     {
       text: "PC",
-      icon: <FaWindows />,
+      icon: <FaUmbrellaBeach />,
     },
     {
       text: "Playstation",
-      icon: <FaPlaystation />,
+      icon: <FaUmbrellaBeach />,
     },
     {
       text: "Mobile",
-      icon: <FaMobile />,
+      icon: <FaUmbrellaBeach />,
     },
   ];
   const itemsList = [
     {
       text: "About",
-      icon: <FaRegObjectGroup />,
+      icon: <FaUmbrellaBeach />,
     },
     
     {
       text: "Support",
-      icon: <MailIcon />,
+      icon: <FaUmbrellaBeach />,
     },
   ];
   return (
