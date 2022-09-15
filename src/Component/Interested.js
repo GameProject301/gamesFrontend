@@ -36,8 +36,8 @@ class Interested extends React.Component {
 
 
 
-  interestedAdd = (event) => { 
-    event.preventDefault()
+  interestedAdd = () => { 
+    
     console.log("hi intersted")
     var checkboxes = document.getElementsByName("Interested")
     var arr = [];
@@ -74,65 +74,65 @@ class Interested extends React.Component {
 
   render() {
     return (
-      <div>
-        <Modal show={this.state.show} onHide={this.handleClose}>
-          <Modal.Header closeButton>
+      <div className="card" >
+        <Modal show={this.state.show} onHide={this.handleClose} >
+          <Modal.Header closeButton >
             <Modal.Title id="contained-modal-title-vcenter">
               Interested
             </Modal.Title>
           </Modal.Header>
           <Form onSubmit={this.interestedAdd} >
-          <Modal.Body className="show-grid">
-           
-              <Container>
+          <Modal.Body className="show-grid " style={{margin:"50px"}} >
+          <h3>select  </h3>
+              <Container >
                 <Row>
                   <Col xs={6} md={4}>
              
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Racing"  name="Interested" value=" Racing ,"/>
+                      <Form.Check style={{color:'white'}} type="checkbox" label="Racing"  name="Interested" value=" Racing ,"/>
                     </Form.Group>
                   </Col>
                   <Col xs={6} md={4}>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Strategy" name="Interested" value=" Strategy ," />
+                      <Form.Check  style={{color:'white'}} type="checkbox" label="Strategy" name="Interested" value=" Strategy ," />
                     </Form.Group>
                   </Col>
                   <Col xs={6} md={4}>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Card"  name="Interested" value =" Card ,"/>
-                    </Form.Group>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col xs={6} md={4}>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Puzzle" name="Interested" value=" Puzzle ," />
-                    </Form.Group>
-                  </Col>
-                  <Col xs={6} md={4}>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Arcade" name="Interested" value=" Arcade ,"/>
-                    </Form.Group>
-                  </Col>
-                  <Col xs={6} md={4}>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Action" name="Interested"  value=" Action ,"/>
+                      <Form.Check  style={{color:'white'}}type="checkbox" label="Card"  name="Interested" value =" Card ,"/>
                     </Form.Group>
                   </Col>
                 </Row>
                 <Row>
                   <Col xs={6} md={4}>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Family"  name="Interested" value=" Family ,"/>
+                      <Form.Check  style={{color:'white'}} type="checkbox" label="Puzzle" name="Interested" value=" Puzzle ," />
                     </Form.Group>
                   </Col>
                   <Col xs={6} md={4}>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Educational" name="Interested" value=" Educational ," />
+                      <Form.Check  style={{color:'white'}} type="checkbox" label="Arcade" name="Interested" value=" Arcade ,"/>
+                    </Form.Group>
+                  </Col>
+                  <Col xs={6} md={4}>
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                      <Form.Check style={{color:'white'}} type="checkbox" label="Action" name="Interested"  value=" Action ,"/>
+                    </Form.Group>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={6} md={4}>
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                      <Form.Check style={{color:'white'}} type="checkbox" label="Family"  name="Interested" value=" Family ,"/>
+                    </Form.Group>
+                  </Col>
+                  <Col xs={6} md={4}>
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                      <Form.Check style={{color:'white'}} type="checkbox" label="Educational" name="Interested" value=" Educational ," />
                     </Form.Group>
                   </Col>
                 </Row>  
-                  <Button type="submit" >Done</Button>
+                  <Button type="submit"  >Done</Button>
               </Container>
               <Modal.Footer>
         

@@ -13,6 +13,7 @@ class MyList extends React.Component {
     };
   }
   deleteGame = (id) => {
+    alert("are you sure");
     const { user } = this.props.auth0;
     let email =user.email
     axios
@@ -48,45 +49,41 @@ class MyList extends React.Component {
 
   render() {
     return (
-      <div>
+      <>
 
         {this.state.games.map((item) => {
           return (
-            <div>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img
-                  variant="top"
-                  src={item.image}
-                  alt ="img"
-                />
-                <Card.Body>
-                  <Card.Title>{item.name}</Card.Title>
-                  <Card.Text>
-                  Genres:  {item.genres.join(" - ")}
-                  </Card.Text>
-                </Card.Body>
-                <ListGroup className="list-group-flush">
-                    <ListGroup.Item>
-                        {item.platforms.map((element) =>{
+            <div class="item">
+              <ul>
+
+              <li><img src={item.image} alt="" class="templatemo-item" style={{width:"300px"}}/></li>
+              <li><h4> Game  </h4><span>{item.name}</span></li>
+              <li> <h4>Genres</h4><span>{item.genres.join(" - ")}</span></li>
+               {/* {item.platforms.map((element) =>{
+                  
                             return (
-                                <div>
-                                   <h3>{element}</h3>
-                                </div>
+                                
+                                   <span>{element}</span>
+                                
                             )
+                        })}  */}
+                            
+                            <li><div  onClick={() => this.deleteGame(item._id)}class="main-border-button border-no-active"><a href="#">Delete</a></div></li>
+              </ul>
+              
+            
+
+
+         </div>
+         
+              )
+                        
+                        
                         })}
-                 </ListGroup.Item>
-                 <ListGroup.Item> metacritic : {item.metacritic}</ListGroup.Item>
-                 <Button onClick={() => this.deleteGame(item._id)} variant="outline-danger">delete</Button>{' '}
 
-                </ListGroup>
-               
-              </Card>
-            </div>
-          );
-        })}
-      </div>
-    );
-  }
+
+</>
+ );
 }
-
+}
 export default  withAuth0 (MyList);
