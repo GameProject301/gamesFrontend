@@ -14,7 +14,7 @@ class Interested extends React.Component {
     super(props);
     this.state = {
       games: [],
-        showOne : false,
+        showOne : true,
       show: false,
     };
   }
@@ -36,8 +36,8 @@ class Interested extends React.Component {
 
 
 
-  interestedAdd = () => { 
-    
+  interestedAdd = (event) => { 
+    event.preventDefault()
     console.log("hi intersted")
     var checkboxes = document.getElementsByName("Interested")
     var arr = [];
@@ -141,8 +141,8 @@ class Interested extends React.Component {
           </Modal.Body>
          </Form>
         </Modal>
-        {!this.state.showOne&&<Button onClick={this.handleShow} variant="outline-danger">
-          interested
+        {this.state.showOne&&<Button onClick={this.handleShow} variant="outline-danger">
+        ADD my interested Genres
         </Button>}
         
       </div>

@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import { withAuth0 } from '@auth0/auth0-react';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import Swal from 'sweetalert2'
+
 class MyList extends React.Component {
   constructor(props) {
     super(props);
@@ -13,7 +15,7 @@ class MyList extends React.Component {
     };
   }
   deleteGame = (id) => {
-    alert("are you sure");
+  
     const { user } = this.props.auth0;
     let email =user.email
     axios
@@ -22,6 +24,18 @@ class MyList extends React.Component {
         this.setState({
           games: result.data,
         });
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          text: 'deleted  successflly ',
+          showConfirmButton: false,
+          timer: 1500,
+          confirmButtonColor: '#FFBE33',
+          background:'#212529',
+          iconColor:'#FFBE33',
+          color:'rgb(248, 239, 239)'
+      });
+
       })
       .catch((err) => {
         console.log(err);

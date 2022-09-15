@@ -10,6 +10,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import MyList from "./myList"
 import { withAuth0 } from '@auth0/auth0-react';
 import "./styles/profile.css";
+import Swal from 'sweetalert2'
 
 class Profile extends React.Component {
   constructor(props) {
@@ -49,6 +50,8 @@ class Profile extends React.Component {
   render() {
     const {user , isAuthenticated } = this.props.auth0;
     return (
+      <div style={{marginTop:"30px"}}>
+      <div style={{ marginLeft: "18%", padding:"0" }}>
 <div class="container bc">
     <div class="row">
       <div class="col-lg-12">
@@ -104,6 +107,8 @@ class Profile extends React.Component {
             </div>
             </div>
             </div>
+            </div>
+        </div>
     );
   }
 }

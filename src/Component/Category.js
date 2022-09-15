@@ -8,6 +8,7 @@ import { withAuth0 } from "@auth0/auth0-react";
 
 import CardGroup from 'react-bootstrap/CardGroup';
 import './alaa.css';
+import Swal from 'sweetalert2'
 
 
 class Category extends React.Component {
@@ -36,7 +37,17 @@ class Category extends React.Component {
         // this.setState({
         //   showButton:true,
         // });
-        alert("Game added");
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          text: 'Added successflly ',
+          showConfirmButton: false,
+          timer: 1500,
+          confirmButtonColor: '#FFBE33',
+          background:'#212529',
+          iconColor:'#FFBE33',
+          color:'rgb(248, 239, 239)'
+        })
       })
       .catch((err) => {
         console.log(err);

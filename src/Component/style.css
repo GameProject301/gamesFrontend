@@ -77,18 +77,11 @@
     margin-right: 10px;
     color: rgb(214, 214, 219);
   }
- .steam{
-    width: 400px;
-    height: 134px;
-    margin-left: 50px;
-  
- }
+
+ 
  .steam2{
-    width: 400px;
-    height: 134px;
-    margin-left: 10px;
-    
-  
+  width: auto;
+  height: 150px
  }
  .add{
     background-color: red;

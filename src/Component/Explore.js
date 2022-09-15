@@ -6,6 +6,8 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import './alaa.css';
 import CardGroup from 'react-bootstrap/CardGroup';
+import Swal from 'sweetalert2'
+
 class Explore extends React.Component {
   constructor(props) {
     super(props);
@@ -33,7 +35,17 @@ class Explore extends React.Component {
       // this.setState({
       //   showButton:true,
       // });
-      alert("Game added")
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        text: 'Added successflly ',
+        showConfirmButton: false,
+        timer: 1500,
+        confirmButtonColor: '#FFBE33',
+        background:'#212529',
+        iconColor:'#FFBE33',
+        color:'rgb(248, 239, 239)'
+      })
     })
     .catch((err) => {
       console.log(err);
