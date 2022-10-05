@@ -31,7 +31,7 @@ work in githup to check if it works.
 8. Ashar write a Documentation.
 9. Ismail create board in [Trello](https://trello.com/b/29wj3j73/games-301) . and write Task inside 
 it using small item to manage our project.
-10. Abdallah make the [Netlify](https://pro-player.netlify.app/) link of Frontend side.
+10. Abdallah make the [Netlify](https://github.com/orgs/GameProject301/repositories) link of Frontend side.
 11. Ismail make PC component
 12. alaa  Add Auth0 ,so that our application can use the authentication service and Utilize the `AuthButtons` component in  `Header`. and show `Login` to users not signed in. When a signed-in user clicks the logout button, it  log the user out of the application.
 
